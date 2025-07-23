@@ -1,0 +1,57 @@
+h1{
+
+color:goldenrod;
+background-color:grey
+
+}
+
+
+div{
+    /*
+    background-color: aquamarine;
+    font: size 25px;*/
+}
+
+.div1{
+
+    background-color: brown;
+}
+
+.div2{
+
+    background-color: forestgreen;
+}
+
+.parent{
+
+    font-size: 25px;
+    /* 
+    #font has 3 properties
+    border-top-color:red;
+    border-top-width:4px;
+    border-top-style:dashed;
+    #but we can write this in 1 line
+    */
+   border-top:red 10px dashed ;
+   border-bottom: yellow 10px dashed;
+   border-left:blue 10px dashed;
+   border-right:green 10px double;
+}
+
+.main{
+
+    height: 200px;
+    width: 300px;
+    border: 1px dashed rgb(193, 74, 74);
+    text-align:justify;
+}
+
+.c{
+
+    text-align: center;
+}
+
+.d{
+
+    font-size: 25px;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+.container .col{
+    height: 200px;
+    width:  200px;
+    border: 1px solid black;
+    /* margin:10px; */
+}
+
+.col{
+
+    background-color: darkgreen;
+}
+
+.col2{
+
+    position: relative;
+    left: 100px;
+    top: -100px;
+    background-color: green;
+}
+
+.col3{
+position: relative;
+top: -200px;
+left:200px;
+background-color: greenyellow;
+
+}
+
+.col4{
+
+    background-color: yellow;
+    position: relative;
+    top: -300px;
+    left:300px;
+}
+</style>
+
+<style>
+.column{
+
+    border:1px solid black;
+    width:300px;
+    height:300px;
+}
+.column img{
+
+    height:150px;
+   margin-left: 30px;
+   margin-top: 10px;
+}
+.container .product-title{
+
+    text-align: justify;
+}
+
+.content{
+
+    height:50px;
+    /* border: 1px solid orange; */
+    position:relative;
+    top:0px;
+    text-align: center;
+}
+
+.product-title h2{
+/* background-color: yellow; */
+position: relative;
+top: -30px;
+font-weight: bold;
+
+}
+
+.column{
+position: relative;
+top:-40px;
+text-align: center;
+font-weight: bold;
+margin: 10px;
+height:300px;
+width: 300px;
+border: 2px solid rgb(133, 133, 133);
+border-radius: 20px;
+
+
+}
+
+#column1{
+
+    position: relative;
+    left: 320px;
+    top: -350px;
+
+}
+#column2{
+
+    position: relative;
+    left: 650px;
+    top: -660px;
+
+}
+
+#column3{
+
+    position: relative;
+    left: 970px;
+    top: -970px;
+
+}
+.container-fluid{
+
+    /* margin-: 50px; */
+
+}
+
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="col col1"></div>
+        <div class="col col2" id="col2"></div>
+        <div class="col col3"></div>
+        <div class="col col4"></div>
+    </div>
+    <div class="container-fluid">
+              
+        <div>
+            <div class="column" >
+                <div class="img"><img src="images/car1.png" alt=""></div>
+
+                <div>
+                    <div class="content">
+
+                        <div clas="product-title"><h2>Battery</h2></div>
+
+                        <div class="product-des">RS:1000</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="column" id="column1">
+                <div class="img"><img src="images/car2.png" alt=""></div>
+
+                <div>
+                    <div class="content">
+
+                        <div clas="product-title"><h2>Engine Oil</h2></div>
+
+                        <div class="product-des">RS:1500</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column" id="column2">
+                <div class="img"><img src="images/car3.png" alt=""></div>
+
+                <div>
+                    <div class="content">
+
+                        <div clas="product-title"><h2>Chargers</h2></div>
+
+                        <div class="product-des">RS:2500</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column" id="column3">
+                <div class="img"><img src="images/car1.png" alt=""></div>
+
+                <div>
+                    <div class="content">
+
+                        <div clas="product-title"><h2>Plugs</h2></div>
+
+                        <div class="product-des">RS:5000</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

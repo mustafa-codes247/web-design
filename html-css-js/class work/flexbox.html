@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+.container{
+    /* border: 1px solid pink; */
+}
+
+.row{
+
+    /* border:1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.col{
+
+    height: 300px;
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 20px;
+}
+
+.col .card .img img{
+
+    height:inherit;
+    /* border: 1px solid blue; */
+      margin-top: 30px;
+    
+
+}
+
+.col .card .img{
+    height:inherit;
+    /* border: 1px solid blue; */
+  
+    text-align: center;
+}
+
+.content h2{
+    /* background-color: yellow; */
+    position: relative;
+    bottom: 15px;
+    text-align: center;
+}
+
+.content p{
+/* background-color: yellow; */
+  position: relative;
+    bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- card start -->
+                <div class="card">
+                    <div class="img">
+                        <img src="images/c1.jfif" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>honda civic</h2>
+                        <p>RS 50 Lakh</p>
+
+                    </div>
+                </div>
+                <!-- card end -->
+
+            </div>
+            <div class="col">
+                <!-- card start -->
+                <div class="card">
+                    <div class="img">
+                        <img src="images/c2.jfif" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>suzuki mehran</h2>
+                        <p>RS 5 Lakh</p>
+
+                    </div>
+                </div>
+                <!-- card end -->
+            </div>
+            <div class="col">
+                <!-- card start -->
+                <div class="card">
+                    <div class="img">
+                        <img src="images/c3.jfif" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>toyota corolla</h2>
+                        <p>RS 40 Lakh</p>
+
+                    </div>
+                </div>
+                <!-- card end -->
+            </div>
+            <div class="col">
+                <!-- card start -->
+                <div class="card">
+                    <div class="img">
+                        <img style="height: 150px;" src="images/c4.jfif" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>kia sorento</h2>
+                        <p>RS 30 Lakh</p>
+
+                    </div>
+                </div>
+                <!-- card end -->
+            </div>
+
+
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

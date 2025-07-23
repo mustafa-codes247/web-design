@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+<style>
+.container{
+display: grid;
+/* we have divided whole screen into 3 columns */
+grid-template-columns: 200px 400px 620px;
+/* and divided rows into 5 parts */
+/* this is what grid does */
+grid-template-rows: 100px 200px 300px 400px 100px;
+grid-gap: 10px;
+}
+
+.container .col{
+    border: 1px solid black;
+}
+/* we can expand the column size to 2,3 or as per choice */
+.col-1{
+    grid-column: span 3;
+}
+/* here column2 is spanned wrt 2 rows */
+.col-2{
+    grid-row: span 2; 
+}
+/* we also can span wrt both column and rows */
+.col-3{
+grid-column: span 2;
+grid-row: span 2;
+}
+
+.col-4{
+    grid-column: span 3;
+}
+
+.col-5{
+    grid-column: span 3;
+}
+</style>
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="col col-1"></div>
+        <div class="col col-2"></div>
+        <div class="col col-3"></div>
+        <div class="col col-4"></div>
+        <div class="col col-5"></div>
+    </div>
+    
+</body>
+</html>

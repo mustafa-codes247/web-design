@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+
+
+    <style>
+header .container{
+
+height:100px;
+width: 100%;
+padding-bottom: 40px;
+border-bottom: 1px solid black;
+}
+
+header .container .navbar{
+    height: inherit;
+    width:80%;
+    /* border: solid 1px burlywood; */
+    margin: 0px auto;
+    display: flex;
+    /* flex is used to manage all elements inside navbar */
+    justify-content: space-between;
+}
+
+header .container .navbar .nav{
+    height: inherit;
+    width: 75%;
+    /* border: 1px solid orange; */
+}
+
+header .container .navbar .logo h2{
+
+    /* background-color: burlywood; */
+    position: relative;
+    top:-85px;
+    color: darkgreen;
+    text-align: center;
+}
+header .container .navbar .logo img{
+
+    /* background-color: burlywood; */
+    position: relative;
+    align-items: center;
+    top: -20px;
+    z-index: -1;
+}
+
+header .container .navbar .nav ul{
+
+    padding: 10px;
+    position: relative;
+    top:50px;
+    left:50px;
+}
+header .container .navbar .nav ul li{
+    display:inline;
+    padding:10px;
+    margin-left: 15px;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- header starts -->
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/plantnest.png" alt=""><h2>Plantnest</h2>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>Home</li>
+                    <li>Gallery</li>
+                    <li>Contact</li>
+                    <li>Policy</li>
+                    <li>Faq</li>
+                    <li>About</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+   </header>
+    <!-- header ends -->
+</body>
+</html>

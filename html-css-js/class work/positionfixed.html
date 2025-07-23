@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed position</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+
+        .header{
+            height: 100px;
+            width: 100%;
+            /* div is block level element, it already covers 100% width without telling it but we still have to write here because position fixed disturbs position of itself and its adjescent element*/
+            background-color: rgb(45, 159, 35);
+            position:fixed ;
+            z-index:1;
+            /* z index is used to move the specific elemetn to front layer */
+        }
+
+        .content{
+            position: relative;
+            top:100px;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="header"></div>
+        <div class="content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est architecto rem provident, reiciendis perferendis ipsum! Eos exercitationem voluptatem neque error iure voluptatibus autem, at nostrum omnis minima, velit ducimus unde.
+        Minus dolorem commodi nam. Corporis iste, est veniam voluptates ut accusamus perferendis dignissimos. Facere possimus odio soluta neque obcaecati reiciendis, dolores adipisci eum recusandae ab aliquid deserunt explicabo dignissimos quos.
+        Expedita rerum sunt dicta suscipit nam molestiae officia veritatis neque non atque ipsum facere adipisci doloribus quos, vel laboriosam voluptates iste qui excepturi quis iure, nulla illo. Non, laudantium fuga?
+        Obcaecati molestias pariatur nobis unde repellendus quae reiciendis natus voluptates magnam enim mollitia culpa tempore minima, consequatur dolorem ipsum ut quo, aliquid quisquam a et? Eligendi voluptatum cum ullam aliquid?
+        Suscipit placeat voluptatem quidem, voluptates repudiandae officiis unde vitae officia aperiam, facilis aliquid quam? Illum, itaque sed similique suscipit, quod doloremque reprehenderit maxime tempora ab odit modi officiis ad accusantium!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est architecto rem provident, reiciendis perferendis ipsum! Eos exercitationem voluptatem neque error iure voluptatibus autem, at nostrum omnis minima, velit ducimus unde.
+        Minus dolorem commodi nam. Corporis iste, est veniam voluptates ut accusamus perferendis dignissimos. Facere possimus odio soluta neque obcaecati reiciendis, dolores adipisci eum recusandae ab aliquid deserunt explicabo dignissimos quos.
+        Expedita rerum sunt dicta suscipit nam molestiae officia veritatis neque non atque ipsum facere adipisci doloribus quos, vel laboriosam voluptates iste qui excepturi quis iure, nulla illo. Non, laudantium fuga?
+        Obcaecati molestias pariatur nobis unde repellendus quae reiciendis natus voluptates magnam enim mollitia culpa tempore minima, consequatur dolorem ipsum ut quo, aliquid quisquam a et? Eligendi voluptatum cum ullam aliquid?
+        Suscipit placeat voluptatem quidem, voluptates repudiandae officiis unde vitae officia aperiam, facilis aliquid quam? Illum, itaque sed similique suscipit, quod doloremque reprehenderit maxime tempora ab odit modi officiis ad accusantium!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est architecto rem provident, reiciendis perferendis ipsum! Eos exercitationem voluptatem neque error iure voluptatibus autem, at nostrum omnis minima, velit ducimus unde.
+        Minus dolorem commodi nam. Corporis iste, est veniam voluptates ut accusamus perferendis dignissimos. Facere possimus odio soluta neque obcaecati reiciendis, dolores adipisci eum recusandae ab aliquid deserunt explicabo dignissimos quos.
+        Expedita rerum sunt dicta suscipit nam molestiae officia veritatis neque non atque ipsum facere adipisci doloribus quos, vel laboriosam voluptates iste qui excepturi quis iure, nulla illo. Non, laudantium fuga?
+        Obcaecati molestias pariatur nobis unde repellendus quae reiciendis natus voluptates magnam enim mollitia culpa tempore minima, consequatur dolorem ipsum ut quo, aliquid quisquam a et? Eligendi voluptatum cum ullam aliquid?
+        Suscipit placeat voluptatem quidem, voluptates repudiandae officiis unde vitae officia aperiam, facilis aliquid quam? Illum, itaque sed similique suscipit, quod doloremque reprehenderit maxime tempora ab odit modi officiis ad accusantium!
+        Quia odit facilis perferendis similique, veniam dolorum quam quis autem molestiae sapieeniti magnam assumenda delectus beatae impedit ad velit nobis nulla libero, autem magni laborum quae atur ratione adipisci illum quisquam libero officia excepturi repellendus obcaecati corrupti sint, quam consequuntur autem est. Delectus rerum iure, id dolorem dolores ut!
+        Incidunt maxime illum, dolorum vitae nisi non magni architecto temporibus ullam! Officiis, error. Quidem, nam architecto dolores incidunt voluptatum 
+        Quia odit facilis perferendis similique, veniam dolorum quam quis autem molestiae sapieeniti magnam assumenda delectus beatae impedit ad velit nobis nulla libero, autem magni laborum quae atur ratione adipisci illum quisquam libero officia excepturi repellendus obcaecati corrupti sint, quam consequuntur autem est. Delectus rerum iure, id dolorem dolores ut!
+        Incidunt maxime illum, dolorum vitae nisi non magni architecto temporibus ullam! Officiis, error. Quidem, nam architecto dolores incidunt voluptatum 
+        Quia odit facilis perferendis similique, veniam dolorum quam quis autem molestiae sapieeniti magnam assumenda delectus beatae impedit ad velit nobis nulla libero, autem magni laborum quae atur ratione adipisci illum quisquam libero officia excepturi repellendus obcaecati corrupti sint, quam consequuntur autem est. Delectus rerum iure, id dolorem dolores ut!
+        Incidunt maxime illum, dolorum vitae nisi non magni architecto temporibus ullam! Officiis, error. Quidem, nam architecto dolores incidunt voluptatum fuga molestiae officiis veritatis iste ut doloribus doloremque quasi similique distinctio.
+        Repellat null
+
+    </div>
+
+
+    
+</body>
+</html>

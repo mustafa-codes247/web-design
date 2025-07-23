@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar + dropwown</title>
+
+
+    <style>
+
+
+header .container{
+
+height:100px;
+width: 100%;
+padding-bottom: 40px;
+border-bottom: 1px solid black;
+
+}
+
+header .container .navbar{
+    height: inherit;
+    width:80%;
+    /* border: solid 1px burlywood; */
+    margin: 0px auto;
+    display: flex;
+    /* flex is used to manage all elements inside navbar */
+    justify-content: space-between;
+}
+
+header .container .navbar .nav{
+    height: inherit;
+    width: 75%;
+    /* border: 1px solid orange; */
+}
+
+header .container .navbar .logo h2{
+
+    /* background-color: burlywood; */
+    position: relative;
+    top:-85px;
+    color: darkgreen;
+    text-align: center;
+}
+header .container .navbar .logo img{
+
+    /* background-color: burlywood; */
+    position: relative;
+    align-items: center;
+    top: -20px;
+    z-index: -1;
+}
+
+header .container .navbar .nav ul{
+
+    padding: 10px;
+    position: relative;
+    top:50px;
+    left:50px;
+}
+header .container .navbar .nav ul li{
+    display:inline;
+    padding:10px;
+    margin-left: 15px;
+}
+
+/* dropdown css starts from below*/
+
+#gallery{
+    position:relative;
+    left:25px;
+}
+.dropdown{
+
+    position:absolute;
+    /* background-color: bisque; */
+    right: -50px;
+    top: -1px;
+    width:100px;
+    padding:30px;
+    display: none;
+}
+
+.dropdown .item{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    padding-top: 3px;
+}
+
+#gallery:hover .dropdown{
+    display: block;
+}
+
+/* bg cover css starts from below*/
+#cover .background{
+
+    background: url("images/bg.jpg");
+    height: 500px;
+    width: 100%;
+    background-size:cover ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#cover .background .col h4{
+    position: relative;
+    top: 75px;
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+#cover .background .col h1{
+    position: relative;
+    top: 55px;
+    text-align: center;
+    color:white;
+    font-size: 60px;
+    letter-spacing: 2px;
+}
+
+</style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- header starts -->
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/plantnest.png" alt=""><h2>Plantnest</h2>
+
+                
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>Home</li>
+                    <li id="gallery">Gallery
+                        <i class="fa fa-caret-down"></i>
+
+                        <div class="dropdown">
+
+                            <div class="item">Indoor Plants</div>
+                            <div class="item">Outdoor Plants</div>
+                        </div>
+                        <li>                                                                                                                            
+                    <li>Contact</li>
+                    <li>Policy</li>
+                    <li>Faq</li>
+                    <li>About</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+   </header>
+    <!-- header ends -->
+
+    <!-- cover image starts -->
+
+    <section id="cover">
+        <div class="background">
+        <div class="col">
+
+            <h1>Welcome to <br>PlantNest</h1>
+            <h4 >where You meet Nature</h4>
+        </div>
+</div>
+</section>
+    <!-- cover image ends -->
+</body>
+</html>

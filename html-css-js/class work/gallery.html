@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+<style>
+     .container{
+        display: grid;
+     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        grid-auto-flow: dense;
+        grid-gap: 10px; 
+        grid-template-rows: 200px;
+    }
+
+    .col{
+        display:flex;
+    } 
+
+    img{
+        height:auto ;
+        width:100%;
+        border-radius: 10px;
+    }
+
+    .col1{
+        grid-column: span 2;
+
+    }
+
+    .col2{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .col3{
+        grid-row: span 2;
+        grid-column: span 2;
+    } 
+
+
+</style>
+
+
+</head>
+<body>
+    <div class="container">
+      <div class="col col1"><img src="images/n1.webp" alt=""></div>
+      <div class="col col2"><img src="images/n2.webp" alt=""></div>
+      <div class="col col3"><img src="images/n3.jfif" alt=""></div>
+      <div class="col col4"><img src="images/n4.jfif" alt=""></div>
+      <div class="col col5"><img src="images/n5.jfif" alt=""></div>
+      <div class="col col6"><img src="images/n6.jfif" alt=""></div>
+      <div class="col col7"><img src="images/n7.jfif" alt=""></div>
+      <div class="col col8"><img src="images/n8.jfif" alt=""></div>
+      <div class="col col9"><img src="images/n1.webp" alt=""></div>
+      <div class="col col10"><img src="images/n2.webp" alt=""></div>
+    </div>
+
+
+
+</body>
+</html>
