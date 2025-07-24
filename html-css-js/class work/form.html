@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!-- in this file we are making form which takes input from user of multiple data like name , email , file upload etc -->
+
+    <!-- each form field is taken within a div to make it block level, it's a professional way so we can style it easily later -->
+    <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" pattern="[a-zA-Z\s]{3,}"
+        placeholder="Enter Your Name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="">Email</label>
+        <input type="Email"
+        placeholder="Enter Your Email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="">Password</label>
+        <input type="password">
+    </div>
+
+    <div class="form-group">
+        <label for="">Choose File</label>
+        <input type="file" id="">
+    </div>
+
+    <div class="form-group">
+        <label for="">Message</label>
+        <textarea name="" id=""></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="">Select City</label>
+        <select name="" id="">
+            <option value="">Select</option>
+            <option value="">Karachi</option>
+            <option value="">Lahore</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="">Select Price</label>
+        <input type="range" min="1000"max="5000">                   
+    </div>
+
+    <div class="form-group">
+        <label for="">Date</label>
+        <input type="date">
+
+    </div>
+
+    <div class="form-group">Date Time</div>
+    <label for="">set time and Date</label>
+    <input type="datetime-local">
+</body>
+</html>
