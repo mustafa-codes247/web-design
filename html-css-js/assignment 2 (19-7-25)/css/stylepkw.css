@@ -73,11 +73,11 @@ justify-content: space-evenly !important;
 header .container .navbar .nav ul li{
     display:inline;
     justify-content: space-between;
-    width:80%;
+    width:70%;
     height:inherit;
     position: relative;
     top: -30px;
-    margin-left: 90px;
+    margin-left: 80px;
     color: white;
     font-size: 18px;
     
@@ -266,7 +266,7 @@ header .container .navbar .logo{
 header #cover {
     position:relative;
     top: -35px;
-    height: 600px;
+    height: 500px;
     width: 100%;
     background:linear-gradient(to bottom, rgb(0,10,22,255),rgb(1,55,118,255));
 
@@ -354,5 +354,252 @@ header #cover .filter .filtext{
     font-size: 12px;
     text-align: center;
 }
-
 /* cover styling ends */
+
+/* Sell Your Car section starts */
+
+
+.parentsyc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+.sycbox{
+    position:relative ;
+    top: 653px;
+    margin-top: 0px;
+    height: 300px;
+    width: 70%;
+    border: 1px solid rgb(146, 146, 146);
+}
+
+.syctext{
+
+ position: absolute;
+ font-size: 25px;
+ top: -15px;
+ left:50%;
+transform: translateX(-50%);
+background-color: white;
+  padding: 0px 0px;
+  white-space: nowrap;
+
+}
+.syctext2{
+
+ position: absolute;
+ font-size: 25px;
+
+ top: 120px;
+ left:50%;
+transform: translateX(-50%);
+background-color: white;
+  padding: 0px 50px;
+  white-space: nowrap;
+
+}
+
+.sycta{
+
+    position: absolute;
+     top: 70px;
+     left: 20px;
+     color: rgb(9, 82, 134);
+}
+
+
+.sycline{
+    position:relative ;
+    top: 200px;
+    margin-top: -130px;
+    margin-left: 530px;
+    height: 140px;
+    width: 10%;
+    border-left: 1px solid rgb(146, 146, 146);
+}
+
+.syctb{
+
+    position: absolute;
+     top: 70px;
+     left: 750px;
+     color: rgb(9, 82, 134);
+}
+
+
+.sycta ul{
+    padding-top: 10px;
+    
+    font-size: 17px;
+    color: black;
+    list-style: none;
+}
+
+.sycta ul li{
+padding-bottom: 10px;
+}
+
+.syctb ul li{
+padding-bottom: 10px;
+}   
+
+
+.syctb ul{
+    padding-top: 10px;
+    font-size: 17px;
+    color: black;
+    list-style: none;
+}
+
+
+/* Sell Your Car section ends */
+
+
+/* browse used car section starts */
+
+.parentbuc{
+    position: relative;
+    top: 700px;
+    background-color: rgb(230, 230, 230); 
+    height: 500px;
+}
+
+.buc h1{
+position: relative;
+top: 50px;
+left: 220px;
+color: rgb(90, 90, 90);
+gap: 20px;
+   
+}
+
+.brslst{
+
+    font-size: 20px;
+    list-style:none ;
+    display:flex;
+    justify-content: left;
+    margin-left: 180px;
+    
+    
+    
+}
+
+
+.brslst li{
+    width: 90%;
+    position: relative;
+   top: 80px;
+display: inline;
+justify-content: space-evenly;
+margin-left: 40px;
+
+}
+
+.brslst li:hover{
+    color: rgb(2, 65, 153);
+}
+
+.brslst li:active{
+    color: rgb(2, 65, 153);
+}
+
+.containerbuc{
+
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 100px;
+    justify-content: space-evenly;
+     padding: 0 200px;
+   
+}
+
+.containerbuc .flex{
+display: flex;
+     background-color: #f1f1f1;
+    flex-basis: calc(100% / 6 - 20px);
+    margin: 10px;
+    text-align: center;
+    height: 130px;
+    font-size: 10px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+   
+  
+    
+}
+
+.containerbuc .flex img{
+
+    position: relative;
+    top: -30px;
+    height: 50px;
+}
+
+
+.containerbuc .flex .content {
+  margin-top: auto;
+  font-size: 15px;
+}
+/* browse used car section ends */
+
+/* managed by pakwheels section starts */
+
+.containermanaged{
+
+     position: relative;
+    top: 700px;
+    background-color: rgb(208, 208, 208); 
+    height: 500px;
+    padding: 20px;
+
+}
+
+.containermanaged .mtext{
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    left: 190px;
+
+
+
+}
+
+.flexb{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 150px;
+}
+
+.colm{
+
+    
+height: 300px;
+    width: 250px;
+
+}
+
+.flexb .colm h4{
+
+color: green;
+}
+
+.flexb .colm p{
+color: rgb(115, 115, 115);
+
+}
+
+
+.flexb .colm img{
+
+    height: 150px;
+
+}
+/* managed by pakwheels section ends */
