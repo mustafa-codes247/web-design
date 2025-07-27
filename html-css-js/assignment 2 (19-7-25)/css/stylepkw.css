@@ -553,18 +553,20 @@ display: flex;
 
      position: relative;
     top: 700px;
-    background-color: rgb(208, 208, 208); 
-    height: 500px;
+    background-color: rgb(217, 217, 217); 
+    height: 400px;
     padding: 20px;
 
 }
 
+
 .containermanaged .mtext{
 
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 20px;
     position: relative;
     left: 190px;
+    
 
 
 
@@ -603,3 +605,123 @@ color: rgb(115, 115, 115);
 
 }
 /* managed by pakwheels section ends */
+
+
+/* featured used section starts */
+
+.containerf{
+
+     position: relative;
+    top: 700px;
+    background-color: rgb(255, 255, 255); 
+    height: 350px;
+  
+
+}
+
+.containerf .ftext{
+
+    padding-top: 50px;
+    padding-bottom: 20px;
+    position: relative;
+    left: 190px;
+    
+
+
+
+}
+
+.flexf{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 150px;
+}
+
+.colf{
+
+    
+height: 300px;
+    width: 250px;
+
+}
+
+.flexf .colf h4{
+
+color: green;
+}
+
+.flexf .colm p{
+color: rgb(115, 115, 115);
+
+}
+
+
+.flexf .colf img{
+
+    height: 150px;
+
+}
+
+
+/* featured section ends */
+
+/* featured new starts */
+.containerfn{
+
+     position: relative;
+    top: 750px;
+    background-color: rgb(208,208,208); 
+    height: 500px;
+  
+
+}
+
+.containerfn .fntext{
+
+    padding-top: 50px;
+    padding-bottom: 20px;
+    position: relative;
+    left: 190px;
+    
+
+
+
+}
+
+.flexfn{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 150px;
+}
+
+.colfn{
+
+    
+height: 300px;
+    width: 250px;
+
+}
+
+.flexfn .colfn h4{
+
+color: green;
+}
+
+.flexfn .colf p{
+color: rgb(115, 115, 115);
+
+}
+
+
+.flexfn .colfn img{
+
+    height: 150px;
+
+}
+
+
+/* featured new section ends */
