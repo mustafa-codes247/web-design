@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition,transform,animation</title>
+    <style>
+
+
+    /* transition starts */ 
+
+    .text1{
+
+            text-align: center;
+            font-size: 30px;
+            padding: 5px;
+        }
+        .transitionbutton{
+            height: 50px;
+            width:150px;
+            border:3px solid black;
+            border-radius: 10px;
+            transition: all 0.1s ease-in 0s;
+        }
+
+        .transitionbutton:hover{
+            box-shadow: 2px 2px 5px rgb(165, 165, 165);
+        }
+
+        .home{
+
+
+            padding: 5px;
+            border:1px solid rgb(37, 12, 255);
+            border-radius: 50px;
+            transition: all 0.1s ease-in 0s;
+            text-decoration: none;
+            
+        }
+
+         .home:hover{
+            
+            box-shadow: 2px 2px 5px rgb(168, 173, 224);
+        }
+
+
+        /* transform starts */
+
+        .text2{
+
+            text-align: center;
+            font-size: 30px;
+            padding: 5px;
+        }
+        .boxes{
+            display: flex;
+            
+        }
+        .box{
+
+            height: 200px;
+            width:200px;
+            background-color: blue;
+            display: inline;
+            align-items: center;
+            justify-content: space-evenly;
+            margin:0  auto;
+            
+        }
+
+        #box1{
+
+            transform: rotate(45deg);
+            transition:all 0.3s ease 0s;
+            background-color: aqua;
+        }
+
+        #box1:hover{
+    transform: rotate(90deg);
+        }
+
+         #box2{
+
+            transform: rotatex(45deg);
+            transition:all 0.3s ease 0s;
+        }
+
+        #box2:hover{
+
+            transform: rotatex(20deg);
+        }
+
+
+         #box3{
+            transition:all 0.3s ease 0s;
+        }
+
+        #box3:hover{
+
+            transform: skew(25deg);
+        }
+
+        /* animation starts */
+
+        .text3{
+
+            text-align: center;
+            font-size: 30px;
+            padding: 5px;
+        }
+
+        .animdiv{
+
+            display: flex;
+        }
+
+        .animbox{
+
+            height: 200px;
+            width: 200px;
+            background-color: chartreuse;
+            align-items: center;
+            margin:0 auto;
+            animation: swirl 2s linear 0s infinite reverse;
+            transform: rotate(0);
+
+        }
+
+        @keyframes swirl{
+
+            0%{transform:rotate(0);}
+            100%{transform:rotate(360deg);}
+        }
+        
+
+
+    </style>
+</head>
+<body>
+
+<!-- transition -->
+
+ <div class="text1">transition</div>
+<div class="transitionbutton"></div><br>
+<div>
+    <a href="INDEX.html" class="home">home</a>
+</div>
+
+<!-- transform -->
+ <div class="text2">transform</div>
+<div class="boxes">
+<div class="box" id="box1"> box 1 rotate full</div>
+<div class="box" id="box2">box 2 rotate x</div>
+<div class="box" id="box3">box 3 skew</div>
+</div>
+
+<!-- Animation -->
+
+ <div class="text3">animation</div>
+ <div class="animdiv">
+ <div class="animbox"></div>
+</div>
+
+
+</body>
+</html>
