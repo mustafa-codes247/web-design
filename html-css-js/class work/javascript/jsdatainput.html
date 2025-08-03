@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript input and output</title>
+</head>
+<body>
+
+
+    <script>
+
+        //prompt is used to get input from user but we usually don't use it professionally
+        // document is method used to perform any task on document(screen) and .write is to
+        // write anything on screen wihtout any html tag, it is usually not document manipulation 
+        var StdName= prompt("Enter Your Name");
+        var StdAge= prompt("Enter Your Age");
+        document.write("Your Name is: " + StdName + "<br>" + " and your age is: " + StdAge + "<br>");
+        alert("user updated");
+
+
+        var num1=prompt("Enter 1st number");
+        var num2=prompt("Enter 2nd number");
+        var sum;
+        var sub;
+        var div;
+        var mul;
+
+        // + sign is reserved sign and js is considering num1 and num2 to be string values
+        // thats why we have converted those strings to floats
+        var num1 = parseFloat(num1,3);
+        var num2 = parseFloat(num2,3);
+
+        sum=num1+num2;
+        sub=num1-num2;
+        mul=num1*num2;
+        div=num1/num2;
+        document.write("input numbers are: "+num1+ " and " +num2 + "<br>" );
+        document.write("addition is:"+sum + "<br>" );
+        document.write("subtraction is:"+sub + "<br>");
+        document.write("multiply is:"+mul + "<br>" );
+        document.write("division is:"+div + "<br>");
+
+    </script>
+    
+</body>
+</html>
