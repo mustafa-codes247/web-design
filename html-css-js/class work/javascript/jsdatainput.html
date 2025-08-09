@@ -13,19 +13,18 @@
         //prompt is used to get input from user but we usually don't use it professionally
         // document is method used to perform any task on document(screen) and .write is to
         // write anything on screen wihtout any html tag, it is usually not document manipulation 
-        var StdName= prompt("Enter Your Name");
-        var StdAge= prompt("Enter Your Age");
-        document.write("Your Name is: " + StdName + "<br>" + " and your age is: " + StdAge + "<br>");
+        var stdName= prompt("Enter Your Name");
+        var stdAge= prompt("Enter Your Age");
+        document.write("Your Name is: " + StdName + "<br>" + " and your age is: " + stdAge + "<br>");
         alert("user updated");
 
-
+        // simple calculator app using JS:
         var num1=prompt("Enter 1st number");
         var num2=prompt("Enter 2nd number");
         var sum;
         var sub;
         var div;
         var mul;
-
         // + sign is reserved sign and js is considering num1 and num2 to be string values
         // thats why we have converted those strings to floats
         var num1 = parseFloat(num1,3);

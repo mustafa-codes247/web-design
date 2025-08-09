@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <h1></h1>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+
+
+    <script>
+
+        // to link external file, we use src="./(directory name)/file name"
+        let a=8;
+        let b=5;
+
+        let result= a++ +b + ++a +a + --b + a++
+
+        document.getElementsByTagName("h1")[0].innerHTML = result + "arithmetic operator";
+
+        let n1=40;
+        let n2=5;
+        let sub = n1 - n2;   
+        let add= n1 + n2;
+        let mul=n1*n2;
+        let divi=n1/n2;
+
+        document.getElementsByTagName("p")[0].innerHTML = add + "  :addition"; 
+        
+        document.getElementsByTagName("p")[1].innerHTML = sub + "  :Subtraction"; 
+
+        document.getElementsByTagName("p")[2].innerHTML = mul  + "  :Multiply";
+
+        document.getElementsByTagName("p")[3].innerHTML = divi  + "  :Division";
+
+        // js consider prompt values as string, we are converting it to float or int
+        let num1=parseFloat(prompt("enter 1st num"));
+        let num2=parseFloat(prompt("enter 2nd num"));
+         let subt = num1 - num2;   
+        let addi= num1 + num2;
+        let mult=num1*num2;
+        let divis=num1/num2;
+
+          document.getElementsByTagName("h3")[0].innerHTML = addi + "  :addition"; 
+        
+        document.getElementsByTagName("h3")[1].innerHTML = subt + "  :Subtraction"; 
+
+        document.getElementsByTagName("h3")[2].innerHTML = mult  + "  :Multiply";
+
+        document.getElementsByTagName("h3")[3].innerHTML = divis  + "  :Division";
+        
+
+
+
+    </script>
+    
+</body>
+</html>

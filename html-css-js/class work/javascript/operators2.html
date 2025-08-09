@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relational operators -9aug25-</title>
+</head>
+<body>
+
+
+
+    <script>
+        // plus sign converts string to integer
+        let a=+prompt("enter 1st num");
+        let b=+prompt("enter 2nd num");
+
+        let is_a_grt_or_eq= a>=b; 
+        let is_a_less_or_eq= a<=b; 
+        let is_a_not_eq= a!=b;
+        let is_a_less= a<b;
+        let is_a_grt = a>b;
+
+        // data types checking using === and !==
+        // it checks both conditions i.e data types plus values too. if any of two conditions true: it will print true
+         let is_dtypeof_or_value_a_eq_b= a===b;
+        let is_dtypeof_or_value_a_not_eq_b= a!==b;
+
+
+        // printing values and relational operators 
+        
+        document.writeln("A=" + a + "<br>");
+        document.writeln("B=" + b + "<br>");
+        document.writeln("is A less=" + is_a_less + "<br>");
+        document.writeln("is A Greater=" + is_a_grt + "<br>");
+        document.writeln(is_a_grt_or_eq + "= is A great or Equal <br>");
+        document.writeln(is_a_less_or_eq + "= is A less or Equal <br>");
+        document.writeln(is_a_not_eq + "= is A not equals to B <br>");
+
+        document.writeln("is data type of A equals to dtype of B=    " + is_dtypeof_or_value_a_eq_b + "<br>");
+        document.writeln("is data type of A not equals to dtype of B=    " + is_dtypeof_or_value_a_not_eq_b + "<br>");
+
+    </script>
+    
+</body>
+</html>
