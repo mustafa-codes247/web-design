@@ -11,7 +11,7 @@
 
     <script>
         // plus sign converts string to integer
-        let a=+prompt("enter 1st num");
+        let a=prompt("enter 1st num");
         let b=+prompt("enter 2nd num");
 
         let is_a_grt_or_eq= a>=b; 
@@ -27,16 +27,16 @@
 
       
        
-        let is_dtypeof_or_value_a_eq_b= a===b;
-        let is_dtypeof_or_value_a_not_eq_b= a!==b;
+        let is_both_dtypeof_and_value_a_eq_b= a===b;
+        let is_both_dtypeof_and_value_a_not_eq_b= a!==b;
 
          
         document.writeln("A=" + a + "<br>");
         document.writeln("B=" + b + "<br>");
         document.write(typeof(a) + ": A datatype <br> ");
         document.write(typeof(b) + ": B datatype <br>");    
-        document.writeln("is data type of A equals to dtype of B=    " + is_dtypeof_or_value_a_eq_b + "<br>");
-        document.writeln("is data type of A not equals to dtype of B=    " + is_dtypeof_or_value_a_not_eq_b + "<br>");
+        document.writeln("is both data type and values of A equals to dtype of B=    " + is_both_dtypeof_and_value_a_eq_b + "<br>");
+        document.writeln("is both data type and values A not equals to dtype of B=    " + is_both_dtypeof_and_value_a_not_eq_b + "<br>");
 
 
         // printing values and relational operators 
