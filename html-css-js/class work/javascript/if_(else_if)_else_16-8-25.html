@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if_(else_if)_else</title>
+</head>
+<body>
+
+
+    <p id="ans"></p>
+
+
+    <script>
+
+
+// **************************************************************************************************************************
+
+ // JS (IF - ELSE IF -ELSE)
+
+
+
+
+
+        // let lang= prompt("Enter Your Favourite Language:");
+
+        // if (lang=="html"){
+
+        //     document.getElementById("ans").innerHTML="html is for structuring";
+        // }
+
+        // else if (lang=="js"){
+
+        //      document.getElementById("ans").innerHTML="js is for functionality";
+        // }
+
+        //   else if (lang=="css"){
+
+        //      document.getElementById("ans").innerHTML="css is for styling";
+        // }
+
+        // else {
+
+        //     document.getElementById("ans").innerHTML="what is this ?";
+
+        // }
+
+
+// **************************************************************************************************************************
+
+
+
+// CALCULATOR USING JS IF - ELSE IF -ELSE
+
+
+        // let num1=prompt("enter 1st number:");
+        // let num2=prompt("enter 2nd number:");
+
+        // let op = prompt(`choose operator {+ or - or * or /}`);
+
+        //  if (op=="+"){
+
+        //     document.getElementById("ans").innerHTML=+num1 + +num2;
+        // }
+
+        // else if (op=="-"){
+
+        //      document.getElementById("ans").innerHTML=num1-num2;
+        // }
+
+        //   else if (op=="-"){
+
+        //      document.getElementById("ans").innerHTML=num1*num2;
+        // }
+
+        //   else if (op=="/"){
+
+        //      document.getElementById("ans").innerHTML=num1/num2;
+        // }
+
+        // else {
+
+        //     document.getElementById("ans").innerHTML="enter correct number and operator";
+
+        // }
+
+// **************************************************************************************************************************
+
+
+
+// nested if else (checking nationality for voting)
+
+
+
+
+let nat= prompt("enter your nationality");
+let age=prompt("Enter Your Age");
+let remain=18-age;
+
+if (nat=="pakistani"){
+
+    if ( age>=18) { 
+
+        document.writeln("eligible for vote");
+                  }
+
+    else {
+        document.writeln("you are pakistani but ");
+        document.writeln(remain + " years remaining to vote");
+    }
+}
+
+else {
+
+        document.writeln("you are not pakistani");
+}
+
+
+
+    </script>
+    
+</body>
+</html>

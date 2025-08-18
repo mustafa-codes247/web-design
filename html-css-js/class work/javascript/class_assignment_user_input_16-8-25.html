@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class_assignment_user_input_16-8-25</title>
+</head>
+<body>
+
+
+
+
+
+
+    <script>
+
+
+// class assignment user email and password input
+
+        // let a = prompt("enter your email:");
+        // let b = prompt("enter your password:");
+        // let c= prompt("confirm your password:");
+
+        // if (a=="mustafa@gmail.com"){
+            
+        //     if(b==c){
+
+        //         document.writeln("user added successfully !<br>");
+        //         document.writeln("user email :" + a + "<br>");
+        //         document.writeln("user password :" + b + "<br>");
+
+
+        //     }
+
+        //     else{
+
+        //         document.writeln("please write same password in both fields");
+        //     }
+        //      }
+
+        // else{
+
+        //     document.writeln("name incorrect");
+        // }
+
+
+
+// class assignment student marksheet:
+
+        let name= prompt("enter your name:");
+        let id= prompt("confirm your Student id no:");
+        var total = 300;
+       
+
+
+        if (name=="ali" && id==197){
+
+        var math=+prompt("enter maths marks:"); 
+        var science=+prompt("enter science marks:"); 
+        var eng=+prompt("enter english marks:"); 
+        let obtained=eng + math + science;
+        let percentage= (obtained/total) *100;
+        let grade;
+
+            if (obtained>300 || obtained < 0 ){
+
+                document.writeln("please input correct marks" );
+                
+
+            }
+            
+            else if(obtained<=300 && obtained>240 ){
+
+                grade="A";
+                document.writeln("student name: " + name + "<br>" );
+                document.writeln("student id: " + id + "<br>" );
+                document.writeln("obtined marks/total marks  " + obtained + " / " + total+ "<br>" );
+                document.writeln("student percentage: " + percentage.toFixed(2) + " %"  +" <br>" );
+                document.writeln("student grade: " + grade+ "<br>" );
+              
+
+
+            }
+
+            else if(obtained<=240 && obtained>190 ){
+
+                grade="B";
+                document.writeln("student name: " + name + "<br>" );
+                document.writeln("student id: " + id + "<br>" );
+                document.writeln("obtined marks/total marks  " + obtained + " / " + total+ "<br>" );
+                document.writeln("student percentage: " + percentage.toFixed(2) + "<br>" );
+                document.writeln("student grade: " + grade+ "<br>" );
+              
+
+
+            }
+
+            else if(obtained<=190 && obtained>=150 ){
+
+                grade="C";
+                document.writeln("student name: " + name + "<br>" );
+                document.writeln("student id: " + id + "<br>" );
+                document.writeln("obtined marks/total marks  " + obtained + " / " + total+ "<br>" );
+                document.writeln("student percentage: " + percentage.toFixed(2) + "<br>" );
+                document.writeln("student grade: " + grade+ "<br>" );
+              
+
+
+            }
+
+            else{
+                 grade="Failed"
+                document.writeln("student name: " + name + "<br>" );
+                document.writeln("student id: " + id + "<br>" );
+                document.writeln("obtined marks/total marks  " + obtained + " / " + total+ "<br>" );
+                document.writeln("student percentage: " + percentage.toFixed(2) + "<br>" );
+                document.writeln("student grade: " + grade+ "<br>" );
+
+            
+        }
+
+             }
+
+        else{
+
+            document.writeln("student not found");
+        }
+
+
+    </script>
+    
+</body>
+</html>
