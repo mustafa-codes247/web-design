@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        :root {
+            /* VARIABLES KO DEFINE KIA HE CSS ME */           
+            /* :ROOT PURAY HTML KA MAIN HOTA HE */
+            /* Light Mode ke liye color define kar diye */
+            --background-color: white;
+            --text-color: black;
+            --border-color: black;
+            --key-background: white;
+        }
+
+        .dark-mode{
+            /* Dark Mode ke liye color define kar diye */
+            --background-color: #121212;
+            --text-color: #e0e0e0;
+            --border-color: #555;
+            --key-background: #333;
+        }   
+
+        body{
+            /* ham variables ke zariye bhi color define kar sakte hain */
+            /* dynamic color ke liye aesa karna para */
+             background-color: var(--background-color);
+             color: var(--text-color);
+        
+        }
+        .container {
+            margin: 100px 200px;
+        }
+
+        td {
+            text-align: center;
+            height: 60px;
+            width: 60px;
+            border: 1px solid var(--border-color);
+            background-color: var(--key-background);
+           
+        }
+
+        .pressed {
+            box-shadow: 1px 2px 15px rgb(255, 222, 181);
+            background-color: rgb(45, 141, 245);
+            
+        }
+
+        .darkmodecontainer{
+
+           position: absolute;
+            top: 20px;
+            right: 20px;
+
+        }
+        #darkMode{
+            border-radius: 20px;
+           padding: 10px;
+            background-color: var(--key-background);
+            color: var(--text-color);
+            
+        }
+       
+
+
+    </style>
+</head>
+<body onkeydown="handleKeyDown(event)" onkeyup="handleKeyUp(event)">
+<div class="darkmodecontainer">
+    <button id="darkMode">Toggle Dark Mode</button>
+</div>
+<div class="container">
+    <table>
+         <tbody>
+                <tr>
+                    <td id="keyEscape">Esc</td>
+                    <td id="F1key">F1</td>
+                    <td id="F2key">F2</td>
+                    <td id="F3key">F3</td>
+                    <td id="F4key" >F4</td>
+                    <td id="F5key">F5</td>
+                    <td id="F6key">F6</td>
+                    <td id="F7key">F7</td>
+                    <td id="F8key">F8</td>
+                    <td id="F9key">F9</td>
+                    <td id="F10key">F10</td>
+                    <td id="F11key">F11</td>
+                    <td id="F12key">F12</td>
+                    <td id="Homekey">Home</td>
+                    <td id="Endkey">End</td>
+                    <td id="Insertkey">Insert</td>
+                    <td id="Deletekey">Delete</td>
+                </tr>
+                <tr>
+                     <td id="Backquotekey" colspan="2">` <sup><sup>~</sup></sup></td>
+                    <td id="Digit1key">1 <sup>!</sup></td>
+                    <td id="Digit2key">2 <sup>@</sup></td>
+                    <td id="Digit3key">3 <sup>#</sup></td>
+                    <td id="Digit4key">4 <sup>$</sup></td>
+                    <td id="Digit5key">5 <sup>%</sup></td>
+                    <td id="Digit6key">6 <sup>^</sup></td>
+                    <td id="Digit7key">7 <sup>&</sup></td>
+                    <td id="Digit8key">8 <sup>*</sup></td>
+                    <td id="Digit9key">9 <sup>(</sup></td>
+                    <td id="Digit0key">0 <sup>)</sup></td>
+                    <td id="Minuskey">-  &nbsp; <sup><sup>_</sup></sup></td>
+                    <td id="Equalkey">= <sup>+</sup></td>
+                    <td id="keyBackspace" colspan="3">Backspace ⌫</td>
+                </tr>
+
+                    <tr>
+                    <td id="keyTab"  colspan="3">Tab⇥</td>
+                    <td id="keyQ">Q</td>
+                    <td id="keyW">W</td>
+                    <td id="keyE">E</td>
+                    <td id="keyR">R</td>
+                    <td id="keyT">T</td>
+                    <td id="keyY">Y</td>
+                    <td id="keyU">U</td>
+                    <td id="keyI">I</td>
+                    <td id="keyO">O</td>
+                    <td id="keyP">P</td>
+                    <td id="BracketLeftKey">{ <sup>[</sup></td>
+                    <td id="BracketRightKey">} <sup>]</sup></td>
+                    <td id="BackslashKey" colspan="2">\ <sup>|</sup></td>
+                   
+
+                </tr>
+            
+
+
+            
+                <tr>
+                    <td id="keyCapsLock" colspan="3">Caps Lock ⇪</td>
+                    <td id="keyA">A</td>
+                    <td id="keyS">S</td>
+                    <td id="keyD">D</td>
+                    <td id="keyF">F</td>
+                    <td id="keyG">G</td>
+                    <td id="keyH">H</td>
+                    <td id="keyJ">J</td>
+                    <td id="keyK">K</td>
+                    <td id="keyL">L</td>
+                    <td id="SemicolonKey">; <sup>:</sup></td>
+                    <td id="QuoteKey">' <sup>"</sup></td>
+                    <td id="Enterkey" colspan="3">Enter</td>
+                   
+                </tr>
+                
+
+                <tr>
+                    <td id="keyShiftleft" colspan="2">Shift</td>
+                    <td id="keyZ">Z</td>
+                    <td id="keyX">X</td>
+                    <td id="keyC">C</td>
+                    <td id="keyV">V</td>
+                    <td id="keyB">B</td>
+                    <td id="keyN">N</td>
+                    <td id="keyM">M</td>
+                    <td id="Commakey">, <sup><</sup></td>
+                    <td id="Periodkey">. <sup>></sup></td>
+                    <td id="Slashkey">/ <sup>?</sup></td>
+                    <td id="keyShiftright" colspan="2">Shift</td>
+                    <td id="keyPageUp">Pg Up</td>
+                    <td id="ArrowUpkey">↑</td>
+                    <td id="keyPageDown">Pg Dn</td>
+                </tr>
+                <tr>
+                    <td id="keyControlleft" colspan="2">Ctrl</td>
+                    <td id="keyMeta">⊞</td>
+                    <td id="keyAltleft" colspan="2">Alt</td>
+                    <td id="keySpace" colspan="6">  &nbsp; &nbsp; &nbsp;spcace &nbsp; &nbsp; &nbsp;</td>
+                  
+                    <td id="keyAltright">Alt</td>
+                    <td id="keyControlright" colspan="2" >Ctrl</td>
+                    <td id="ArrowLeftkey">←</td>
+                    <td id="ArrowDownkey" >↓</td>
+                    <td id="ArrowRightkey" >→</td>
+                </tr>
+            </tbody>
+    </table>
+</div>
+
+<script>
+    // dark theme ke liye
+    const darkMode = document.getElementById('darkMode');
+    const body = document.body;
+    // Add a click event listener to the button
+darkMode.addEventListener('click', () => {
+    // Toggle the .dark-mode class on the body element
+    body.classList.toggle('dark-mode');
+});
+
+
+    function handleKeyDown(event) {
+        //event.code use hota he keypress ko identify karne ke liye 
+        // har key ka alag code he eg: q ke liye keyQ
+
+        var code = event.code; 
+        // just confirm karne ke liye console me print
+        console.log("Key Code:", code); 
+
+        //1st row of keyboard:
+    
+
+        if (code === 'Escape') {
+            document.getElementById('keyEscape').className = 'pressed';
+        } 
+
+        else if (code === 'F1') {
+            document.getElementById('F1key').className = 'pressed';
+
+            // ye function browser ke default function ko rokta he 
+            // jese f1 press karne se new tab khulta he lekin is function se new tab me nahi jaega
+            event.preventDefault();
+        }
+        else if (code === 'F2') {
+            document.getElementById('F2key').className = 'pressed';
+            event.preventDefault();
+        }
+        else if (code === 'F3') {
+            document.getElementById('F3key').className = 'pressed';
+        }
+         else if (code === 'F4') {
+            document.getElementById('F4key').className = 'pressed';
+            event.preventDefault();
+        }
+        else if (code === 'F5') {
+            document.getElementById('F5key').className = 'pressed';
+            event.preventDefault();
+        }
+         else if (code === 'F6') {
+            document.getElementById('F6key').className = 'pressed';
+            event.preventDefault();
+        }
+        else if (code === 'F7') {
+            document.getElementById('F7key').className = 'pressed';
+            event.preventDefault();
+        }
+         else if (code === 'F8') {
+            document.getElementById('F8key').className = 'pressed';
+            event.preventDefault();
+        }
+        else if (code === 'F9') {
+            document.getElementById('F9key').className = 'pressed';
+            event.preventDefault();
+        }
+         else if (code === 'F10') {
+            document.getElementById('F10key').className = 'pressed';
+            event.preventDefault();
+        }
+         else if (code === 'F11') {
+            document.getElementById('F11key').className = 'pressed';
+            event.preventDefault();
+        }
+        else if (code === 'F12') {
+            document.getElementById('F12key').className = 'pressed';
+            event.preventDefault();
+        }
+        
+        else if (code === 'Home') {
+            document.getElementById('Homekey').className = 'pressed';
+            event.preventDefault();
+        } 
+        else if (code === 'End') {
+            document.getElementById('Endkey').className = 'pressed';
+            event.preventDefault();
+        } 
+        else if (code === 'Insert') {
+            document.getElementById('Insertkey').className = 'pressed';
+            event.preventDefault();
+        } 
+        else if (code === 'Delete') {
+            document.getElementById('Deletekey').className = 'pressed';
+            event.preventDefault();
+        } 
+
+        // 2ND ROW STARTS
+
+        else if (code === 'Backquote') {
+            document.getElementById('Backquotekey').className = 'pressed';
+            event.preventDefault();
+        } 
+
+        else if (code === 'Digit1') {
+            document.getElementById('Digit1key').className = 'pressed';
+        } 
+        else if (code === 'Digit2') {
+            document.getElementById('Digit2key').className = 'pressed';
+        }
+        else if (code === 'Digit3') {
+            document.getElementById('Digit3key').className = 'pressed';
+        } 
+        else if (code === 'Digit4') {
+            document.getElementById('Digit4key').className = 'pressed';
+        } 
+        else if (code === 'Digit5') {
+            document.getElementById('Digit5key').className = 'pressed';
+        }
+        else if (code === 'Digit6') {
+            document.getElementById('Digit6key').className = 'pressed';
+        } 
+        else if (code === 'Digit7') {
+            document.getElementById('Digit7key').className = 'pressed';
+        }
+        else if (code === 'Digit8') {
+            document.getElementById('Digit8key').className = 'pressed';
+        } 
+        else if (code === 'Digit9') {
+            document.getElementById('Digit9key').className = 'pressed';
+        } 
+        else if (code === 'Digit0') {
+            document.getElementById('Digit0key').className = 'pressed';
+        }
+        else if (code === 'Minus') {
+            document.getElementById('Minuskey').className = 'pressed';
+        }
+         else if (code === 'Equal') {
+            document.getElementById('Equalkey').className = 'pressed';
+        }
+         else if (code === 'Backspace') {
+            document.getElementById('keyBackspace').className = 'pressed';
+        } 
+
+
+         
+        //3rd row of keyboard:
+         else if (code === 'Tab') {
+            document.getElementById('keyTab').className = 'pressed';
+            event.preventDefault();
+        }
+
+        else if (code === 'KeyQ') {
+            document.getElementById('keyQ').className = 'pressed';
+        }
+        else if (code === 'KeyW') {
+            document.getElementById('keyW').className = 'pressed';
+        }
+        else if (code === 'KeyE') {
+            document.getElementById('keyE').className = 'pressed';
+        } 
+        else if (code === 'KeyR') {
+            document.getElementById('keyR').className = 'pressed';
+        } 
+        else if (code === 'KeyT') {
+            document.getElementById('keyT').className = 'pressed';
+        } 
+        else if (code === 'KeyY') {
+            document.getElementById('keyY').className = 'pressed';
+        } 
+        else if (code === 'KeyU') {
+            document.getElementById('keyU').className = 'pressed';
+        } 
+        else if (code === 'KeyI') {
+            document.getElementById('keyI').className = 'pressed';
+        }
+        else if (code === 'KeyO') {
+            document.getElementById('keyO').className = 'pressed';
+        } 
+        else if (code === 'KeyP') {
+            document.getElementById('keyP').className = 'pressed';
+        } 
+        else if (code === 'BracketLeft') {
+            document.getElementById('BracketLeftKey').className = 'pressed';
+        }
+        else if (code === 'BracketRight') {
+            document.getElementById('BracketRightKey').className = 'pressed';
+        } 
+         else if (code === 'Backslash') {
+            document.getElementById('BackslashKey').className = 'pressed';
+        } 
+
+        // 4TH row of letters
+
+         else if (code === 'CapsLock') {
+            document.getElementById('keyCapsLock').className = 'pressed';
+        }
+
+        else if (code === 'KeyA') {
+            document.getElementById('keyA').className = 'pressed';
+        }
+        else if (code === 'KeyS') {
+            document.getElementById('keyS').className = 'pressed';
+        } 
+        else if (code === 'KeyD') {
+            document.getElementById('keyD').className = 'pressed';
+        } 
+        else if (code === 'KeyF') {
+            document.getElementById('keyF').className = 'pressed';
+        } 
+        else if (code === 'KeyG') {
+            document.getElementById('keyG').className = 'pressed';
+        } 
+        else if (code === 'KeyH') {
+            document.getElementById('keyH').className = 'pressed';
+        } 
+        else if (code === 'KeyJ') {
+            document.getElementById('keyJ').className = 'pressed';
+        }
+        else if (code === 'KeyK') {
+            document.getElementById('keyK').className = 'pressed';
+        } 
+        else if (code === 'KeyL') {
+            document.getElementById('keyL').className = 'pressed';
+        }
+        else if (code === 'Semicolon') {
+            document.getElementById('SemicolonKey').className = 'pressed';
+        } 
+        else if (code === 'Quote') {
+            document.getElementById('QuoteKey').className = 'pressed';
+        } 
+        else if (code === 'Enter') {
+            document.getElementById('Enterkey').className = 'pressed';
+        } 
+
+        // 5TH row of letters
+         else if (code === 'ShiftLeft') {
+            document.getElementById('keyShiftleft').className = 'pressed';
+        } 
+        else if (code === 'KeyZ') {
+            document.getElementById('keyZ').className = 'pressed';
+        }
+        else if (code === 'KeyX') {
+            document.getElementById('keyX').className = 'pressed';
+        } 
+        else if (code === 'KeyC') {
+            document.getElementById('keyC').className = 'pressed';
+        } 
+        else if (code === 'KeyV') {
+            document.getElementById('keyV').className = 'pressed';
+        } 
+        else if (code === 'KeyB') {
+            document.getElementById('keyB').className = 'pressed';
+        } 
+        else if (code === 'KeyN') {
+            document.getElementById('keyN').className = 'pressed';
+        } 
+        else if (code === 'KeyM') {
+            document.getElementById('keyM').className = 'pressed';
+        }
+        
+        else if (code === 'ShiftRight') {
+            document.getElementById('keyShiftright').className = 'pressed';
+        } 
+        
+
+        // 6th row
+
+        else if (code === 'ControlLeft') {
+            document.getElementById('keyControlleft').className = 'pressed';
+        } 
+
+         
+        else if (code === 'MetaLeft' || code === 'MetaRight') {
+            document.getElementById('keyMeta').className = 'pressed';
+            event.preventDefault();
+        } 
+        else if (code === 'AltLeft') {
+            document.getElementById('keyAltleft').className = 'pressed';
+            event.preventDefault();
+        } 
+        else if (code === 'AltRight') {
+            document.getElementById('keyAltright').className = 'pressed';
+            event.preventDefault();
+        } 
+
+       
+        else if (code === 'Space') {
+            document.getElementById('keySpace').className = 'pressed';
+        } 
+        else if (code === 'PageUp') {
+            document.getElementById('keyPageUp').className = 'pressed';
+            event.preventDefault();
+        } 
+        else if (code === 'PageDown') {
+            document.getElementById('keyPageDown').className = 'pressed';
+            event.preventDefault();
+        }
+
+        else if (code === 'ControlRight') {
+            document.getElementById('keyControlright').className = 'pressed';
+        } 
+    }
+    
+
+    function handleKeyUp(event) {
+        var code = event.code;
+
+        // 1ST row START
+
+        if (code === 'Escape') {
+            document.getElementById('keyEscape').className = '';
+        } 
+        else if (code === 'F1') {
+            document.getElementById('F1key').className = '';
+        } 
+
+        else if (code === 'F2') {
+            document.getElementById('F2key').className = '';
+        }
+        else if (code === 'F3') {
+            document.getElementById('F3key').className = '';
+        } 
+
+        else if (code === 'F4') {
+            document.getElementById('F4key').className = '';
+        }
+
+        else if (code === 'F5') {
+            document.getElementById('F5key').className = '';
+        }
+
+        else if (code === 'F6') {
+            document.getElementById('F6key').className = '';
+        }
+        else if (code === 'F7') {
+            document.getElementById('F7key').className = '';
+        } 
+
+        else if (code === 'F8') {
+            document.getElementById('F8key').className = '';
+        }
+        else if (code === 'F9') {
+            document.getElementById('F9key').className = '';
+        }
+
+        else if (code === 'F10') {
+            document.getElementById('F10key').className = '';
+        }
+        else if (code === 'F11') {
+            document.getElementById('F11key').className = '';
+        } 
+
+        else if (code === 'F12') {
+            document.getElementById('F12key').className = '';
+        }
+        else if (code === 'Home') {
+            document.getElementById('Homekey').className = '';
+        }
+        else if (code === 'End') {
+            document.getElementById('Endkey').className = '';
+        }
+
+        else if (code === 'Insert') {
+            document.getElementById('Insertkey').className = '';
+        }
+        else if (code === 'Delete') {
+            document.getElementById('Deletekey').className = '';
+        }
+
+        // 2nd row starts
+
+        else if (code === 'Digit1') {
+            document.getElementById('Digit1key').className = '';
+        }
+        else if (code === 'Digit2') {
+            document.getElementById('Digit2key').className = '';
+        }
+        else if (code === 'Digit3') {
+            document.getElementById('Digit3key').className = '';
+        }
+        else if (code === 'Digit4') {
+            document.getElementById('Digit4key').className = '';
+        }
+        else if (code === 'Digit5') {
+            document.getElementById('Digit5key').className = '';
+        }
+        else if (code === 'Digit6') {
+            document.getElementById('Digit6key').className = '';
+        }
+        else if (code === 'Digit7') {
+            document.getElementById('Digit7key').className = '';
+        }
+        else if (code === 'Digit8') {
+            document.getElementById('Digit8key').className = '';
+        }
+        else if (code === 'Digit9') {
+            document.getElementById('Digit9key').className = '';
+        }
+        else if (code === 'Digit0') {
+            document.getElementById('Digit0key').className = '';
+        }
+         else if (code === 'Minus') {
+            document.getElementById('Minuskey').className = '';
+        }
+        else if (code === 'Equal') {
+            document.getElementById('Equalkey').className = '';
+        }
+      
+        
+        // 1ST row end
+
+        // 2ND row START
+
+        if (code === 'Backquote') {
+            document.getElementById('Backquotekey').className = '';
+        } 
+        else if (code === 'F1') {
+            document.getElementById('F1key').className = '';
+        } 
+
+        else if (code === 'F2') {
+            document.getElementById('F2key').className = '';
+        }
+        else if (code === 'F3') {
+            document.getElementById('F4key').className = '';
+        } 
+
+        else if (code === 'F4') {
+            document.getElementById('F4key').className = '';
+        }
+
+        else if (code === 'F5') {
+            document.getElementById('F5key').className = '';
+        }
+
+        else if (code === 'F6') {
+            document.getElementById('F6key').className = '';
+        }
+        else if (code === 'F7') {
+            document.getElementById('F7key').className = '';
+        } 
+
+        else if (code === 'F8') {
+            document.getElementById('F8key').className = '';
+        }
+        else if (code === 'F9') {
+            document.getElementById('F9key').className = '';
+        }
+
+        else if (code === 'F10') {
+            document.getElementById('F10key').className = '';
+        }
+        else if (code === 'F11') {
+            document.getElementById('F11key').className = '';
+        } 
+
+        else if (code === 'F12') {
+            document.getElementById('F12key').className = '';
+        }
+        else if (code === 'Home') {
+            document.getElementById('Homekey').className = '';
+        }
+        else if (code === 'End') {
+            document.getElementById('Endkey').className = '';
+        }
+
+        else if (code === 'Insert') {
+            document.getElementById('Insertkey').className = '';
+        }
+        else if (code === 'Delete') {
+            document.getElementById('Deletekey').className = '';
+        }
+
+        else if (code === 'KeyU') {
+            document.getElementById('keyU').className = '';
+        }
+        else if (code === 'KeyI') {
+            document.getElementById('keyI').className = '';
+        }
+        else if (code === 'KeyO') {
+            document.getElementById('keyO').className = '';
+        }
+         else if (code === 'KeyP') {
+            document.getElementById('keyP').className = '';
+        }
+
+         else if (code === 'BracketLeft') {
+            document.getElementById('BracketLeftKey').className = '';
+        }
+        else if (code === 'BracketRight') {
+            document.getElementById('BracketRightKey').className = '';
+        }
+        else if (code === 'Backslash') {
+            document.getElementById('BackslashKey').className = '';
+        }
+        // 2ND row end
+
+        // 3rd row
+
+        else if (code === 'Tab') {
+            document.getElementById('keyTab').className = '';
+        } 
+
+        else if (code === 'KeyQ') {
+            document.getElementById('keyQ').className = '';
+        } 
+
+        else if (code === 'KeyW') {
+            document.getElementById('keyW').className = '';
+        }
+        else if (code === 'KeyE') {
+            document.getElementById('keyE').className = '';
+        }
+        else if (code === 'KeyR') {
+            document.getElementById('keyR').className = '';
+        }
+
+        else if (code === 'KeyT') {
+            document.getElementById('keyT').className = '';
+        }
+        else if (code === 'KeyY') {
+            document.getElementById('keyY').className = '';
+        }
+
+        else if (code === 'KeyU') {
+            document.getElementById('keyU').className = '';
+        }
+        else if (code === 'KeyI') {
+            document.getElementById('keyI').className = '';
+        }
+        else if (code === 'KeyO') {
+            document.getElementById('keyO').className = '';
+        }
+         else if (code === 'KeyP') {
+            document.getElementById('keyP').className = '';
+        }
+
+         else if (code === 'BracketLeft') {
+            document.getElementById('BracketLeftKey').className = '';
+        }
+        else if (code === 'BracketRight') {
+            document.getElementById('BracketRightKey').className = '';
+        }
+        else if (code === 'Backslash') {
+            document.getElementById('BackslashKey').className = '';
+        }
+        // 3rd row end
+
+        // 4th row start
+        else if (code === 'CapsLock') {
+            document.getElementById('keyCapsLock').className = '';
+        } 
+        else if (code === 'KeyA') {
+            document.getElementById('keyA').className = '';
+        }
+        else if (code === 'KeyS') {
+            document.getElementById('keyS').className = '';
+        }
+        else if (code === 'KeyD') {
+            document.getElementById('keyD').className = '';
+        }
+         else if (code === 'KeyF') {
+            document.getElementById('keyF').className = '';
+        }
+        else if (code === 'KeyG') {
+            document.getElementById('keyG').className = '';
+        }
+        else if (code === 'KeyH') {
+            document.getElementById('keyH').className = '';
+        }
+        else if (code === 'KeyJ') {
+            document.getElementById('keyJ').className = '';
+        }
+         else if (code === 'KeyK') {
+            document.getElementById('keyK').className = '';
+        }
+         else if (code === 'KeyL') {
+            document.getElementById('keyL').className = '';
+        }
+        else if (code === 'Semicolon') {
+            document.getElementById('SemicolonKey').className = '';
+        }
+         else if (code === 'Quote') {
+            document.getElementById('QuoteKey').className = '';
+        }
+         else if (code === 'Enter') {
+            document.getElementById('Enterkey').className = '';
+        }
+
+        // 4TH ROW ENDS
+
+
+        // 5TH ROW STARTS
+        else if (code === 'ShiftLeft') {
+            document.getElementById('keyShiftleft').className = '';
+        } 
+         
+        else if (code === 'KeyZ') {
+            document.getElementById('keyZ').className = '';
+        }
+        else if (code === 'KeyX') {
+            document.getElementById('keyX').className = '';
+        }
+        else if (code === 'KeyC') {
+            document.getElementById('keyC').className = '';
+        }
+         else if (code === 'KeyV') {
+            document.getElementById('keyV').className = '';
+        }
+        else if (code === 'KeyB') {
+            document.getElementById('keyB').className = '';
+        }
+        else if (code === 'KeyN') {
+            document.getElementById('keyN').className = '';
+        }
+        else if (code === 'KeyM') {
+            document.getElementById('keyM').className = '';
+        }
+
+        else if (code === 'ShiftRight') {
+            document.getElementById('keyShiftright').className = '';
+        }
+        else if (code === 'ShiftRight') {
+            document.getElementById('keyShiftright').className = '';
+        }
+
+        else if (code === 'Space') {
+            document.getElementById('keySpace').className = '';
+        } 
+
+        
+        
+        else if (code === 'ControlLeft' || code === 'ControlRight') {
+            document.getElementById('keyControlleft').className = '';
+        } 
+
+        else if (code === 'ControlRight') {
+            document.getElementById('keyControlright').className = '';
+        } 
+        else if (code === 'MetaLeft') {
+            document.getElementById('keyMeta').className = '';
+        } 
+        else if (code === 'AltLeft') {
+            document.getElementById('keyAltleft').className = '';
+        } 
+        else if (code === 'AltRight') {
+            document.getElementById('keyAltright').className = '';
+        } 
+        else if (code === 'Backspace') {
+            document.getElementById('keyBackspace').className = '';
+        } 
+        else if (code === 'PageUp') {
+            document.getElementById('keyPageUp').className = '';
+        } 
+        else if (code === 'PageDown') {
+            document.getElementById('keyPageDown').className = '';
+        }
+    }
+</script>
+</body>
+</html> 
