@@ -7,8 +7,32 @@
 </head>
 <body>
 
+    <table style="border: 1px solid;border-collapse: collapse;">
+        <thead style="border: 1px solid black;"> 
+            <tr>
+                <th border-collapse: collapse>Names</th>
+            </tr>
+        </thead>
 
-    <script>
+        <tbody >
+    
+         </tbody>
+
+    </table>
+   
+<script>
+
+let std=['Ali','Asad','Asif','Amir'] // array banai
+let tbody=document.querySelector("tbody"); //table me tbody se link kia variable ko
+let count=1;
+
+for (a of std){ // for of loop array ke liye use hota he
+    let newrow = tbody.insertRow(); //har iteration par new row banane ke liye
+    newrow.insertCell().innerText = count + "."+ a; // array ke elements put karne ke liye
+    count+=1;
+    
+    }
+
     //     let a=1;
     //     do{
 
@@ -21,14 +45,14 @@
     // )
 
 // evenoddfunction
-    let iseven=prompt("Enter any number:");
+    // let iseven=prompt("Enter any number:");
 
-    while(iseven%2==0){
-        document.Writeln("its's even <br>")
-        break;
-    }
+    // while(iseven%2==0){
+    //     document.Writeln("its's even <br>")
+    //     break;
+    // }
  
-    document.writeln(iseven + " is odd number <br>")
+    // document.writeln(iseven + " is odd number <br>")
 
     
 
@@ -44,6 +68,8 @@
 
 // let std2 = new Array('Hafsa','Izqa','Safia')
 // document.write(std2[1] + "<br>")
+
+
 
     </script>
     
