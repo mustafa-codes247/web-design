@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>voting app</title>
+</head>
+<body>
+
+    <h1></h1>
+    <h4></h4>
+    
+
+
+
+
+    <script>
+        document.getElementsByTagName("h1")[0].innerHTML="Welcome to voting app"
+        let a=prompt("enter your Religion");
+
+        if (a=="Islam" || a=="islam"  ){
+
+            let b=prompt("Enter your Nationality");
+
+            if (b=="pakistani" || b=="Pakistani"){
+
+                let c=+prompt("Enter Your Age");
+
+                if (c>=18){
+
+                    document.getElementsByTagName("h4")[0].innerHTML="you can vote!"
+
+                        }
+
+                else{
+
+                    let d=18-c;
+
+                 document.getElementsByTagName("h4")[0].innerHTML="wait for more"+ d + "years";
+                    }
+
+            }
+            else{
+
+            document.getElementsByTagName("h4")[0].innerHTML="your Nationality should be Pakistani"
+             }
+            
+
+        }
+
+        else{
+
+           document.getElementsByTagName("h4")[0].innerHTML="your religion should be Islam to vote"
+        }
+
+        
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event handling</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <h1>hello world 2</h1>
+    </div>
+
+    <button onclick="head()">click</button>
+
+    <script>
+        function head(){
+        let x= document.createElement("h1");
+        x.innerText="this is second child"
+        x.style.color="red";
+
+        let y=document.getElementById("container");
+        y.appendChild(x);
+
+        }
+
+         
+
+    </script>
+</body>
+</html>
