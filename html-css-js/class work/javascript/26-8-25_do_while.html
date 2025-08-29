@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <table style="border: 1px solid;border-collapse: collapse;">
+    <!-- <table style="border: 1px solid;border-collapse: collapse;">
         <thead style="border: 1px solid black;"> 
             <tr>
                 <th border-collapse: collapse>Names</th>
@@ -18,20 +18,55 @@
     
          </tbody>
 
-    </table>
+    </table> -->
+
+    <p>Array to Table using for-of loop and template literal</p>
+
+     <table border="1" id="myTable">
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+    </tr>
+  </table>
+
+  
    
 <script>
-
-let std=['Ali','Asad','Asif','Amir'] // array banai
-let tbody=document.querySelector("tbody"); //table me tbody se link kia variable ko
-let count=1;
-
-for (a of std){ // for of loop array ke liye use hota he
-    let newrow = tbody.insertRow(); //har iteration par new row banane ke liye
-    newrow.insertCell().innerText = count + "."+ a; // array ke elements put karne ke liye
-    count+=1;
+    // array banadi
+    let students = ["Sara", "Ahmed", "Zara"];
     
+
+    // table element ko get kia id ke zariye
+    let table = document.getElementById("myTable");
+
+    let i = 1; //serial number ke liye
+    for (let name of students) {
+    // backtick se multi line content likh satke hain jese <pre> ka tag kaam karta he
+      let row =`
+          <td>${i}</td> 
+          <td>${name}</td>
+        `; // ${variable-value} 
+      table.innerHTML = table.innerHTML + row; //row me jo value mojud thi us ko new innerhtml me put kardia 
+      i++;
     }
+
+
+
+// print array in table using for of loop
+
+//  let std=['Ali','Asad','Asif','Amir'] array banai
+// let tbody=document.querySelector("tbody"); //table me tbody se link kia variable ko
+// let count=1;
+
+// for (a of std){ // for of loop array ke liye use hota he
+//     let newrow = tbody.insertRow(); //har iteration par new row banane ke liye
+//     newrow.insertCell().innerText = count + "."+ a; // array ke elements put karne ke liye
+//     count+=1;
+    
+//     }
+
+
+
 
     //     let a=1;
     //     do{
@@ -68,6 +103,8 @@ for (a of std){ // for of loop array ke liye use hota he
 
 // let std2 = new Array('Hafsa','Izqa','Safia')
 // document.write(std2[1] + "<br>")
+
+
 
 
 

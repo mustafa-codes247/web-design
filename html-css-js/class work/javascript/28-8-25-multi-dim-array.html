@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28-8-25-multi-dim-array</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+
+        // syntax : [ [] , [] , [] ]
+     
+
+    // document.writeln(letters[1][2] + "<br>") 
+    //returns F
+
+    // document.writeln(letters + "<br>") 
+    //returns all elemments but in same line
+
+    // for (outerarray of letters){
+
+    //     for (innerarray of outerarray){
+
+    //         document.writeln(innerarray + "<br>") //returns all elements each in new line b/c of multi (for of) loop in multi dim array
+    //     }
+    // }
+
+    
+
+   let letters=[
+
+        ["A","B","C"],
+        ["D","E","F"],
+        ["G","H","I"]
+       
+    ]
+    // array methods: ye multi-dim array me bhi use ho sakte hain lekin js har inner array ko 1 element consider karti he
+    document.writeln("main array: " + letters +"<br>" +"<br>") //returns A,B,C,D,E,F,G,H,I
+
+    // push:
+    letters.push(["J","K","L"]) // push same array ke last me element add karta he
+    document.writeln("j,k,l push (added in last): " + letters +"<br>"+"<br>") //returns A,B,C,D,E,F,G,H,I,J,K,L 
+
+     // pop:
+    letters.pop(letters) // pop same array ke  last se element remove karta he
+    document.writeln("J,K,L pop (removed from last): " +letters +"<br>"+"<br>") //returns A,B,C,D,E,F,G,H,I (kiunke akhri array thi ["J","K","L"])
+
+    // shift:
+    letters.shift(letters) // shift same array ke  start se element remove karta he
+    document.writeln("A,B,C shift(removed from start): " +letters +"<br>"+"<br>") // returns D,E,F,G,H,I 
+
+    // unshift:
+    letters.unshift(["X","Y","Z"]) // unshift same array ke  start me element add karta he
+    document.writeln("X,Y,Z unshift(addede in start):" +letters +"<br>"+"<br>") // returns X,Y,Z,D,E,F,G,H,I
+
+    // splice:
+    letters.splice(1,1) // (same array) bracket me pehla index , phir jitne elements delete karne hain wo number phir new elements jo add karne hon 
+    document.writeln("main array spliced (specific elements deleted)" +letters+"<br>"+"<br>") //returns
+
+    // slice:
+    let newletters = letters.slice(1,2) // slice new array ke element ko delete karta he
+    document.writeln("slice (delete spefic element):" +newletters +"<br>"+"<br>") // returns D,E,F
+
+     // join:
+    let newletters2 = letters.join("-") // join new array ke element aik sath likhta he separator ke sath
+    document.writeln("join (separator after each element):" +newletters2 +"<br>"+"<br>") //returns X,Y,Z-X,Y,Z-D,E,F-G,H,I
+    // (har inner array aik element he is liye element ke baad separator lagaya he)
+
+    // concat:
+    let numbers = [[5,2],[4,1]] //new array banadi takay concat karwa saken
+    let newletters3= numbers.concat(letters) //concat 2 arrays ko mila kar likhta he
+    document.writeln("2 arrays concate (merged)" +newletters3 +"<br>"+"<br>") //returns 5,2,4,1,X,Y,Z,X,Y,Z,D,E,F,G,H,I
+
+    // sort:
+    let num=[5,4,3,2,1] 
+    num.sort() //sorting 1D array me hoti he , multi-D array me js arrays ko string bana deta he
+    document.writeln("num=[5,4,3,2,1] sorted to: " +num +"<br>"+"<br>") //returns  num=[5,4,3,2,1] sorted to: 1,2,3,4,5
+
+
+
+     
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
