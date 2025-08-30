@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-functions-techwiz</title>
+</head>
+<body>
+
+    <script>
+// array
+
+// 4 types of function:
+// 1) non parameterized (in which values can not be passed)
+// 2) parameterized (in which values can be passed so we dont have to create new function for different values)
+// 3) return function (return means to store the value for later use , means when function is called , it will print that value)
+// 4) arrow function (it just reduces the length of code)
+
+let courses = ["CPISM", "DISM", "HDESE1","HDSE2"];
+
+
+// in react js, (for-each) loop is used instead of for of (which is used for arrays)
+
+// 1st we take array name(course here)
+// then for.each loop used
+// and take new variable(list here) to store each value of that array to that varaible
+// then we print each value of that new variable using for-each loop
+courses.forEach(list => {
+    document.write(list, "<br>")
+})
+
+let  price = [100, 300, 500]
+
+// arrow function:
+// let/var keyword is used instead of function keyword,  then function name , then array name
+// .map() is used to run loop on array and update each value according to need and stores values to new array
+// usecase: in add to cart function in websites
+// we 1st take new array (finalprice here)
+// original array.map
+// p is here just parameter to iterate new value to new array
+
+// for-each and 
+
+
+let finalprice = price.map(p => p - 10 , "<br>")
+
+// for multi dimensional array , we will further iterate 
+
+finalprice.forEach(list => {
+    document.write(list, "<br>")
+})
+
+document.write(courses)
+console.log(courses)
+
+document.write(courses[1] ,"<br>" ,courses[0])
+
+for(value of courses){
+    document.write(value ,"<br>")
+}
+
+
+
+// **************************************************
+//  iteration in multi dimensional array 
+let prices = [
+  [100, 200, 300],
+  [400, 500, 600],
+  [700, 800, 900]
+];
+
+let finalPrices = prices.map(row => row.map(p => p - 10));
+
+finalPrices.forEach(row => {
+    row.forEach(price => document.write(price, " "));
+    document.write("<br>");
+});
+
+// ****************************************************
+
+// multidimensional array
+
+let students = [
+    ["ali", "ali@gmail.com", 20, "karachi"],
+    ["zain", "zain@gmail.com", 22, "hyderabad"],
+    ["saim", "saim@gmail.com", 20, "islamabad"],
+    ["asad", "asad@gmail.com", 18, "karachi"]
+]
+
+// access multi dimensional array
+
+document.write(students[2][1], "<br>",  students[0][0]);
+document.write(students)
+
+// 1st we take array name(student here), and take new variable(value here) to store each value of that array to that varaible
+// then we print each value of that new variable using for-of loop
+
+for(value of students){
+    document.write(value[1] , "<br>")
+}
+
+for(value of students){
+
+    for(data of value){
+        document.write(data , "<br>")
+    }
+ }
+
+
+// arrow function:
+
+// let/var/const keyword is used instead of function keyword
+// then function name, then "="
+// then parameter name , then "=>"
+// then your actual code
+// eg: const add = (a, b) => {return a + b;}
+
+
+let hello = num1 => document.write(num1, "<br>")
+
+
+// parameterized function:
+// one function can be used for multiple values (here names)
+// the value in brackets is parameter when function is created , and when function is invokes, this value is argument
+let names;
+function helloworld(names)
+{
+    document.writeln("hi" + names)
+}
+
+
+helloworld("ali")
+helloworld("zain")
+helloworld("hasan")
+helloworld("saad")
+
+
+// to get the argument from user, this will look like:
+
+function helloWorld(name) {
+  document.writeln("Hi, " + name);
+}
+
+let userName = prompt("Enter your name");
+helloWorld(userName);
+
+
+// OR
+
+function helloWorld(name) {
+  document.writeln("Hi, " + name);
+}
+
+helloWorld(prompt("Enter your name"));
+
+// another example:
+// number of parameters should be same as in argument passing (2 here)
+
+function add(num1 , num2){
+    document.writeln(num1+num2)
+}
+
+add(20,10)
+
+
+// another example:
+// passing 3 parameters and arguments
+
+
+function add(num1 , num2, name){
+    document.writeln(num1+num2,"<br>",name)
+}
+
+add(20,10, "ali")
+
+
+
+
+
+
+// -------------------------------------------------------------------------------------
+
+
+// non parameterized function:
+// can not be used for multiple values, will just print same code again and again when used multiple times
+//called calling or invoking
+let names;
+function helloworld()
+{
+    document.writeln("hi asad")
+}
+
+
+hello()
+
+
+// arrow function
+
+let hello =()=> document.write("welcome")
+
+hello()
+
+// return function
+// it stores/saves the value within its function but the stored value can be used within any other function when called
+// here first return function returns value when hello function called 
+// and then in 2nd example, message function also invoked/called the hello function, here we are able to use the value due to return function
+
+// here we have to use return because we have stores the argumented invoked function to new variable , which only "return" has ability to get that value
+// basically , by storing valuses in result, function values are used outside of function,thats why we use return
+function hello(num1 , num2){
+    return num1 + num2
+
+}
+
+let result = hello(10, 20)
+document.write("hello ", result) //output : hello 30
+
+function message(){
+    document.write("mesage ", result)
+}
+
+message()  //output : hello 30
+
+
+// object 
+
+let student = {
+    id : 101,
+    Name : "ali", 
+    Email : "ali@gmil.com",
+    Age : 20
+
+}
+
+
+// document.write(student['Name'])
+// (for-in) loop is used in js objects
+// document.write(value): this will print the keys of this object and not the actual values of the key .
+// so to print actual values , we use  array name[new variable] (student[value] here)
+for(value in student){
+    document.write(value , ": " ,   student[value], "<br>")
+}
+
+// object vs array:
+
+to access the value of object , we can also use : student.name,  student.age
+// to update the value of object , we use : student.name ="hasan"
+// to delete the value of object , we use : delete student.name
+
+
+// to access the value of object , we use : student.name student.age
+// to update the value of object , we use : student.name ="hasan"
+// to delete the value of object , we use : delete student.name
+
+// array:
+let courses = ["CPISM", "DISM", "HDESE1","HDSE2"];
+
+// to access the value of array , we use index value: courses[0]
+// to Update a valueof array : courses[0] = "ABCD"
+// to delete an element: courses.pop() or courses.splice(1)
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

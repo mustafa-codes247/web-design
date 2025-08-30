@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30-8-25-js-functions</title>
+</head>
+<body>
+
+
+
+
+    <script>
+
+// * non paramaterized function
+        function nonPrmtrFunc(){
+                document.writeln("Non Parameterized function output : " + (5+3) + "<br>")
+        }
+
+         nonPrmtrFunc()// calling the function
+
+// * paramaterized function 1st example
+        let num1;
+        let num2;
+        // these values are known as parameters in the parenthesis
+        // they are passed when calling the function
+        function prmtrFunc(num1,num2){
+                document.writeln("Parameterized function output: " + (num1+num2) +"<br>")
+        }
+
+        // these values become argument when calling the function 
+        prmtrFunc(5,5)
+
+// * parameterized function 2nd example with user input
+        let nm1=+prompt("Enter 1st number for parameterized func")
+        let nm2=+prompt("Enter 2nd number for parameterized func")
+
+        function prmtrFunc2(n1,n2){
+
+            document.writeln("Parameterized function output with user input : " + 
+            (n1+n2) + "<br>")
+        }
+
+        prmtrFunc2(nm1,nm2) // calling the function
+
+// * return function
+        // return is used to store the result and use it outside of function
+        // but you have to store the result in a variable
+        // normal function can not do this
+        let nmb1=+prompt("Enter 1st number for return func")
+        let nmb2=+prompt("Enter 2nd number for return func ")
+
+        function rtrnFunc(nm1,nm2){
+            return nm1 + nm2
+        }
+        let ans=rtrnFunc(nmb1,nmb2) //returned value stored in variable and can be used anywhere
+        document.writeln("Return function output with user input : " + ans  + "<br>")
+
+ // * arrow functions
+
+        // info:
+        // let/var is used instead of function key then funcName then = then parameter name then => then actual code
+        // example 1
+       let printWelcome =()=> document.write("welcome" + "<br>")
+
+        //calling
+       printWelcome()
+
+       // example 2
+       let d1=+prompt("enter 1st num for arrow function")
+       let d2=+prompt("enter 2nd num for arrow function")
+
+       let printSum = (digit1,digit2) => document.writeln("Arrow function output with user input :" + (digit1+digit2) + "<br>")
+
+       printSum(d1,d2)
+
+
+    </script>
+    
+</body>
+</html>
