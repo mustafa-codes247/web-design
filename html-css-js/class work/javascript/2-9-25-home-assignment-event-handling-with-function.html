@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-9-25-home-assignment-event-handling-with-function</title>
+</head>
+<body>
+
+
+    <button id="myBtn">multi event button</button>
+    <p id="demo"></p>
+
+
+    <script>
+        var x= document.getElementById("myBtn") //element get kia
+        
+        // tamam funcitons bana diye mouse events pe
+        x.addEventListener("mouseover",overFunc);
+        x.addEventListener("click",clickFunc);
+        x.addEventListener("dblclick",dbclickFunc);
+        x.addEventListener("mousedown",downFunc);
+        // x.addEventListener("mousemove",moveFunc);
+
+function overFunc(){
+document.getElementById("demo").innerHTML+= "Moused over!<br>";
+}
+function clickFunc(){
+document.getElementById("demo").innerHTML+= "Moused clicked!<br>";
+}
+function dbclickFunc(){
+document.getElementById("demo").innerHTML+= "Moused double clicked!<br>";
+}
+function moveFunc(){
+document.getElementById("demo").innerHTML+= "Moused moved!<br>";
+}
+function downFunc(){
+document.getElementById("demo").innerHTML+= "Moused down!<br>";
+}
+
+    </script>
+    
+</body>
+</html>

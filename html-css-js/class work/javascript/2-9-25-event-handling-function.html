@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-9-25-event-handling-with-function</title>
+</head> 
+
+
+<body>
+<!-- it is another way to handle event but not efficient -->
+<!-- <button onclick="document.writeln(ansPlus)">click here to add these number</button>
+<br> -->
+<!-- another way to handle event is via addEventListener -->
+ <button id="btn">click here to see magic text</button>
+ <button id="btn2">hover here to see mystery text</button>
+ 
+
+ <p id = "para"></p>
+  <p id = "para2"></p>
+
+
+    <script>
+let btn =document.getElementById("btn")
+let para = document.getElementById("para")
+let btn2 =document.getElementById("btn2")
+let para2 = document.getElementById("para2")
+
+
+btn.addEventListener("click",()=>{
+
+    document.getElementById("para").innerHTML="you are awesome!"
+})
+
+// function keyword is written when not using anonymous function
+btn2.addEventListener("mouseover",function(){
+
+    document.getElementById("para2").innerHTML="keep smiling!"
+})
+
+
+// let n1=+prompt("Enter first number")
+// let n2=+prompt("Enter second number")
+
+// // today we will create return arrow function with event handling 
+// let eventHandlingFunc = ( num1,num2)=>{
+
+//     return num1+ num2
+// }
+// let ansPlus=eventHandlingFunc(n1,n2)
+
+
+
+// btn.onclick =()=>
+// {para.innerHTML="you look awesome"
+// para.style.color="red"}
+
+
+// addEventListener:
+
+// another way is using addEventListener for multiple events hadnling seamlessly
+// because we noticed that with previous method, all events were called at the same time even when we don't want
+// so to tackle this, we use addEventListener
+
+// linking the html elements to a variable on click and saving in that variable
+
+// anonymous function is a funciton which is made and called at same time and are not named , its arrow func ()=>{ }
+
+
+
+var x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myFunction);
+x.addEventListener("click", mySecondFunction);
+x.addEventListener("mouseout", myThirdFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML += "Moused over!<br>";
+}
+
+function mySecondFunction() {
+  document.getElementById("demo").innerHTML += "Clicked!<br>";
+}
+
+function myThirdFunction() {
+  document.getElementById("demo").innerHTML += "Moused out!<br>";
+}
