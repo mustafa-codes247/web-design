@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>windows-events</title>
+</head>
+<body>
+
+    <button id="anchor">click here</button>
+    <br>
+<!-- neeche is form ke events handle kiye gae hain jese focus, blur , change wagera -->
+    <form action="">
+    <input type="text" id="myinput" placeholder="Enter your name">
+    </form>
+
+    <!-- <a href="en.wikipedia.corg" >wikipedia</a> -->
+
+
+<!-- on change form event -->
+ <select name="" id="select">
+
+ <option value="">Select your course</option>
+  <option value="1st">1st</option>
+  <option value="2nd">2nd</option>
+
+</select>
+
+
+    <script>
+// windows events
+
+
+        // var x= document.getElementById("btn")
+        // windows events are premade windows events which trigger on calling them
+        // eg: onload, onscroll, onbeforeunload
+
+        window.onresize=()=>{
+            console.log("window is resizing")
+        }
+
+        // this load on complete loading of screen but here it is overridden by the event listener function below
+        window.onload=()=>{
+            console.log("each content is loaded 100%")
+        }
+
+
+        // we can use function keyword instead of arrow function
+        // this will work when we have a lot of content on the page
+        window.onscroll=function(){
+            console.log("scrolling")
+        }
+        //"prevent default" stops the default function of the element or specific method
+        // 
+        window.onbeforeunload=(e)=>{
+            e.preventDefault()
+            alert("windows is unloading")
+        }
+
+        let anchor=document.getElementById("anchor")
+        anchor.onclick = function(event){
+            event.preventDefault();
+            alert("link is not working")
+        }
+
+
+        //same thing using addevent listener
+
+        window.addEventListener("load",function(){
+            alert("page is loaded")
+        })
+
+// form events
+
+let input = document.getElementById("myinput");
+
+// onfocus:
+input.addEventListener("focus", function(){
+
+    input.style.backgroundColor = "yellow"
+})
+
+// onblur:
+input.addEventListener("blur", function(){
+
+    input.style.backgroundColor = "green"
+})
+
+// onchange:
+let select=document.getElementById("select")
+input.addEventListener("change", function(){
+
+    alert("value has been changed")
+})
+
+
+// practice in screenshot
+
+// objects: we use objects to store multiple data type , objects are composite data types.
+// syntax:
+
+let Students={
+
+    Name: "Asad",
+    Id: 101,
+    email: "asad@gmail.com"
+}
+
+// to show the data in loop, we use "for in" loop for object
+for (value in Students){
+
+    document.writeln(value , ":" , Students[value] , "<br>")
+} 
+
+
+
+
+    </script>
+    
+</body>
+</html>
