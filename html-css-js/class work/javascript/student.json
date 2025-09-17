@@ -1,0 +1,32 @@
+[
+    {
+    "name": "Asad",
+    "age": 21,
+    "id": 101,
+    "course": "physics"
+},
+ {
+    "name": "Shafaq",
+    "age": 20,
+    "id": 102,
+    "course": "maths"
+},
+ {
+    "name": "Ayan",
+    "age": 25,
+    "id": 103,
+    "course": "chemistry"
+},
+{
+    "name": "Shiza",
+    "age": 19,
+    "id": 104,
+    "course": "digital marketing"
+},
+{
+    "name": "Bilal",
+    "age": 24,
+    "id": 105,
+    "course": "web development"
+}
+]

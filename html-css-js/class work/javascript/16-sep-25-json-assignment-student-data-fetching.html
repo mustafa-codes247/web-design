@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-sep-25-json-assignment-student-data-fetching.html</title>
+
+
+   
+        
+
+</head>
+<body>
+    
+    <table border="1" id="studentTable">
+    <tr>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Age</th>
+      <th>Course</th>
+    </tr>
+  </table>
+  
+
+
+
+     <script>
+
+        let row="";  // shuru me empty phir is me puray table ki ui add hogi
+
+// pehle html ke table ko get kia js ke zariye
+let table = document.getElementById("studentTable");
+
+// json file connect kar li
+        fetch('student.json')
+        .then (response => response.json())
+        .then( json =>{
+            for (student of json){
+
+
+            row += `
+        <tr>
+          <td>${student.name}</td>
+          <td>${student.id}</td>
+          <td>${student.age}</td>
+          <td>${student.course}</td>
+        </tr>
+      `
+            }
+// yahan "row" me sara data aik aik kar ke save hoga += ki waja se
+// akhir me sab print ho jaega saved data 
+
+            table.innerHTML +=row
+        })
+
+    </script>
+</body>
+</html>

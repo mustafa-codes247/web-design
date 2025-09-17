@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-sep-25-json-dynamic-data-fetching</title>
+
+
+   
+        
+
+</head>
+<body>
+    
+ <div class="container" id="container" style="display: flex; justify-content: space-evenly;align-items: center; flex-wrap: wrap;"></div>
+
+
+
+     <script>
+
+        let html="";  // shuru me empty phir is me puray card ki ui add hogi
+
+
+// used to  get data from json file
+        fetch('data.json')
+        .then (response => response.json())
+        .then( json =>{
+            for (data of json){
+
+// yahan "html" me sara data aik aik kar ke save hoga += ki waja se
+                html+=`
+
+                <div class="row" style="width: 250px;height: 350px; box-shadow: 0px 0px 10px 2px rgb(216, 216, 216); display: flex; flex-direction: column; align-items: center; padding: 10px; margin: 10px">
+        <div class="card " >
+        <img src="${data.p_image}" alt="" style="height: 170px; display: block; margin: auto;" >
+        <h1>Name: ${data.p_name}</h1>
+        <p>Id:${data.p_id}</p>
+        <p>Price:${data.p_price}</p>
+        <p>Quantity: ${data.p_qty}</p>
+
+
+        </div>
+    </div>
+
+                `
+            }
+
+// akhir me sab print ho jaega saved data 
+            document.getElementById("container").innerHTML=html
+
+        })
+
+
+
+    </script>
+</body>
+</html>

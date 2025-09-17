@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-sep-25-arrayOfObjects</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+// today, we r learning using multiple objects in an array
+// we will use for-of loop for outer array and for-in loop for inner object to access the values of keys
+
+    let Students=[{
+
+    Name: "Asad",
+    Id: 101,
+    email: "asad@gmail.com"
+                },
+
+                {
+    Name: "Ali",
+    Id: 102,
+    email: "ali@gmail.com"
+                },
+                {
+    Name: "Asif",
+    Id: 103,
+    email: "asif@gmail.com"
+                }
+            ]
+
+let i=1
+// we use "for of" loop because of outer array
+for ( values of Students){
+
+   
+
+document.writeln("student ", i , "<br>" )
+ i=i+1;
+
+ // we use "for in" loop because of inner object
+    for (data in values){
+        
+
+        
+         document.writeln(data, ": ", values[data] , "<br>" )
+        
+        
+
+                          }
+
+         document.writeln("<br>" )
+
+}
+
+    </script>
+</body>
+</html>
