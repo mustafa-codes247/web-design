@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-sept-25-assignment-calculator</title>
+</head>
+<body>
+ <!-- numbers ka input lia -->
+   Enter first num: <input type="text" id="first"> <br><br>
+   Enter second num: <input type="text" id="second"> <br><br>
+
+   <!-- operator ka input lia -->
+   select operator:  <select name="" id="opt"><br><br>
+        <option value="none">select</option>
+        <option value="add">+</option>
+        <option value="minus">-</option>
+        <option value="mul">*</option>
+        <option value="divide">/</option>
+    </select>
+
+    <!--  -->
+   <br><br><button id="solve">solve</button><br><br>
+
+    <h1 id="ans"></h1>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+// tamam elements get kiye 
+let first=document.getElementById("first")
+let second=document.getElementById("second")
+let opt=document.getElementById("opt")
+let solve=document.getElementById("solve")
+
+// button ke click pe fucntion chala
+solve.addEventListener("click", function(){
+
+//mukhtalif operators ke liye if else cases run kiye
+if (opt.value=="none"){
+    document.getElementById("ans").innerHTML = "please select any operator"
+}
+else if (opt.value=="add"){
+
+    document.getElementById("ans").innerHTML="asnwer:" + (+(first.value) + +(second.value))
+}
+
+else if (opt.value=="minus"){
+
+    document.getElementById("ans").innerHTML="asnwer:" + (+(first.value) - +(second.value))
+}
+else if (opt.value=="mul"){
+
+    document.getElementById("ans").innerHTML="asnwer:" + (+(first.value) * +(second.value))
+}
+else if (opt.value=="divide"){
+
+    document.getElementById("ans").innerHTML="asnwer:" + (+(first.value) / +(second.value))
+}
+else {
+
+    document.getElementById("ans").innerHTML= "please follow the instructions"
+}
+})
+</script>
+</body>
+</html>

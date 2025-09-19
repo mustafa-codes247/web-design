@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" c-sep-ontent="width=device-width, initial-scale=1.0">
+    <title>18-sep-25-dom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <style>
+        #icon{
+            position: absolute;
+            left: 225px;
+            top:232px
+        }
+    </style>
+</head>
+<body>
+
+
+<!-- heading ki html -->
+    <h1 id="heading">Hello DOM</h1>
+    <button id="btn1">Click to change heading and color</button>
+<br>
+<br>
+<hr>
+
+<!--input button ki html -->
+    <form action="">
+        <input type="text" placeholder="Enter your name" id="name">
+        <button id="btn2">Click Here</button>
+        <p id="para"></p>
+    </form>
+
+<br>
+<br>
+<hr>
+<!-- password hide/show ki html -->
+<form action="">
+password: <input type="password" placeholder="enter password" id="pass"> <i id="icon" class="fa-solid fa-eye"></i>
+</form>
+
+
+
+
+
+
+
+
+<script>
+// heading ki js
+let heading = document.getElementById("heading")
+let btn1 = document.getElementById("btn1")
+btn1.addEventListener("click", function(){
+    heading.innerHTML = "DOM Changed" // heading.innerText = " DOM inner text changed"
+    heading.style.color="red"
+})
+
+// input button ki js
+let btn2 = document.getElementById("btn2")
+let para = document.getElementById("para")
+btn2.addEventListener("click",function(e){
+    e.preventDefault()
+    let name = document.getElementById("name").value="changed"
+})
+
+
+// password hide/show ki js
+let icon=document.getElementById("icon")
+let pass=document.getElementById("pass")
+
+
+icon.addEventListener("click",function(){
+    if (pass.type== 'password'){
+        pass.type='text'
+        icon.classList = "fa solid fa-eye-slash"
+    }
+
+    else {
+        pass.type='password'
+        icon.classList = "fa solid fa-eye"
+
+    }
+
+})
+    </script>
+</body>
+</html>
