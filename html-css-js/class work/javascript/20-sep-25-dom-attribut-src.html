@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20-sep-25-dom-attribut-src</title>
+</head>
+<body>
+    <!-- js ke zariye image change karna -->
+    <img id="img" src="../images/bg.jpg" alt="" style= "height:200px">
+    <br>
+    <br>
+    <br>
+    <button id="btn">click to change image</button>
+    <br>
+    <br>
+    <br>
+    <!-- dom ke zariye link change karna -->
+    <a id="anchor" href="www.wikipedia.org">wikipedia link but daraz after dom changing</a>
+
+
+    
+
+
+    <script>
+
+// link change to daraz.pk
+    let a=document.getElementById("anchor")
+    a.addEventListener("click",function(){
+        a.setAttribute("href","https://www.daraz.pk")
+        a.setAttribute("target","blank")
+    })
+
+// image change using button
+    let img=document.getElementById("img")
+     let btn=document.getElementById("btn")
+btn.addEventListener("click",function(){
+
+     if (img.src.includes("bg.jpg")){
+        img.src = "../images/car1.png"
+        img.style.height="200px";
+        btn.innerHTML="click to view previous image"
+     }
+
+     else {
+        img.src = "../images/bg.jpg"
+        img.style.height="200px";
+        btn.innerHTML="click to view next image"
+
+     }
+
+})
+    
+        
+        
+
+    </script>
+</body>
+</html>

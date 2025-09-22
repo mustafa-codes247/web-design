@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20-sept-25-assignment</title>
+</head>
+<style>
+    *{
+        background-color: black;
+    }
+    .container{
+        margin:auto 600px;
+        color: white;
+    }
+   
+      button {
+        background-color: transparent;
+        color: white;
+        border: 1px solid transparent;
+        position: absolute;
+        right:760px;
+        padding: 2px 2px;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <!-- light assignment -->
+     <div class="container">
+        <img id="img" src="../images/l2.png" alt="" style= "height:200px">
+        <img id="img2" src="../images/l3.png" alt="" style= "height:200px;position: absolute;bottom:340px;left:675px">
+        <br>
+        <button id="btn" style= "position: absolute;bottom:340px;left:675px">OFF</button>
+     </div>
+
+    <script> 
+   let btn=document.getElementById("btn")
+        btn.addEventListener("click",function(){
+            if (img.src.includes("l2.png")){
+                img.src= "../images/l1.png"
+                btn.innerHTML="ON"
+                img.style.height="200px"
+            }
+            else{
+                img.src= "../images/l2.png"
+                btn.innerHTML="OFF"
+                img.style.height="200px"
+            }
+
+        })
+    </script>  
+</body>
+</html>

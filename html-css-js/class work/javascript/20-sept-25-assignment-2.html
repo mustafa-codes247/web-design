@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20-sept-25-assignment-2</title>
+    
+</head>
+<style>
+    
+      button {
+        background-color: transparent;
+        border: 1px solid transparent;
+    }
+</style>
+<body>
+    <!--image slider assignment -->
+     <div class="container">
+       
+        <br>
+     </div>
+
+     <div class="con">
+        <img id="img" src="../images/car1.png" alt="" style= "height:400px;margin: auto 500px;">
+        <button id="btn1" style= "font-size: 30px;position: absolute;bottom:240px;left:725px">➡️Next</button>
+        <button id="btn2" style= "font-size: 30px;position: absolute;bottom:240px;left:525px">back⬅️</button>
+
+     </div>
+
+    <script> 
+    // forward button
+   let btn1=document.getElementById("btn1")
+        btn1.addEventListener("click",function(){
+            if (img.src.includes("car1.png")){
+                img.src= "../images/car2.png"
+                img.style.height="400px"
+            }
+            else if(img.src.includes("car2.png")) {
+                img.src= "../images/car3.png"
+                img.style.height="400px"
+            }
+             else if(img.src.includes("car3.png")) {
+                img.src= "../images/car4.png"
+                img.style.height="400px"
+            }
+            else{
+                img.src= "../images/car1.png"
+                img.style.height="400px"
+            }
+
+        })
+
+        // backward button
+        let btn2=document.getElementById("btn2")
+        btn2.addEventListener("click",function(){
+            if (img.src.includes("car1.png")){
+                img.src= "../images/car4.png"
+                img.style.height="400px"
+            }
+            else if(img.src.includes("car4.png")) {
+                img.src= "../images/car3.png"
+                img.style.height="400px"
+            }
+             else if(img.src.includes("car3.png")) {
+                img.src= "../images/car2.png"
+                img.style.height="400px"
+            }
+            else{
+                img.src= "../images/car1.png"
+                img.style.height="400px"
+            }
+
+        })
+    </script>  
+</body>
+</html>
